@@ -8,12 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
-
+import org.springframework.web.bind.annotation.*;
 import com.task3.models.entity.Trainee;
 import com.task3.models.service.trainee.iTraineeService;
 import org.slf4j.Logger;
@@ -28,13 +23,12 @@ public class traineeController {
 	@Autowired
 	private final iTraineeService traineeservice;
 
-
 	public traineeController(iTraineeService traineeservice) {
 		logger.info("Controller GetAll iniciado");
 		this.traineeservice = traineeservice;
 	}
 
-	@RequestMapping(value = "/trainee", method = RequestMethod.GET)
+	@GetMapping("/trainee")
 	public void index(){
 		logger.info("Controller GetById iniciado");
 		traineeservice.findAll();
@@ -45,18 +39,18 @@ public class traineeController {
 //		return traineeservice.findById(id);
 //
 //	}
-	@RequestMapping(value = "/trainee", method = RequestMethod.POST)
+	@PostMapping("/trainee")
 	public Trainee save(@RequestBody Trainee trainee) {
 		return traineeservice.save(trainee);
 
 	}
-	@RequestMapping(value = "/trainee/{id}", method = RequestMethod.GET)
+	@GetMapping("/trainee/{id}")
 	public Trainee findById(@PathVariable Long id){
 		logger.info("Controller GetById iniciado");
 		return traineeservice.findById(id);
 
 	}
-	@RequestMapping(value = "/trainee/{id}", method = RequestMethod.DELETE)
+	@DeleteMapping("/trainee/{id}")
 	public ResponseEntity<String> delete(@PathVariable Long id) {
 		logger.info("Controller Delete iniciado");
 		traineeservice.delete(id);
@@ -67,7 +61,7 @@ public class traineeController {
 	public void init() {
 		logger.info("Controller iniciado");
 	}
-	@RequestMapping(value = "/trainee/{id}", method = RequestMethod.PUT)
+	@PutMapping("/trainee/{id}")
 	public Trainee update(@RequestBody Trainee trainee , @PathVariable Long id) {
 		logger.info("Controller Update iniciado");
 		return traineeservice.update(trainee, id);

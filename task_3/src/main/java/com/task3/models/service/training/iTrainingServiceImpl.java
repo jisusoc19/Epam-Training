@@ -5,36 +5,39 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
-import com.task3.models.dao.iTrainingdao;
+import com.task3.models.Repository.iTrainingdao;
 import com.task3.models.entity.Training;
 
 import jakarta.annotation.PostConstruct;
-@Repository
+@Service
 public class iTrainingServiceImpl implements iTrainingService {
-	Map<Long, Training> trainingDao;
 	private static final Logger logger = LoggerFactory.getLogger(iTrainingServiceImpl.class);
 
 	@Autowired
 	private iTrainingdao itrainindaoJPA;
-
+	
+	@Transactional(readOnly = true)
 	@Override
 	public Training findbyid(Long id) {
 		// TODO Auto-generated method stub
-		if(trainingDao.containsKey(id)) {
+		if(itrainindaoJPA.existsById(id)) {
 			logger.info("Training con el id " + id + " Seleccionado");
-			return trainingDao.get(id);
+			
+			return itrainindaoJPA.findById(id).orElseGet(null);
 		}else {
 			logger.error("Training con el id " + id + " no encontrado");
 			return null;
 		}
 		
 	}
-
+	@Transactional
 	@Override
 	public Training save(Training training, Long id) {
-		if(trainingDao.containsKey(id)) {
-			trainingDao.put(id,training);
+		if(itrainindaoJPA.existsById(id)) {
+			itrainindaoJPA.save(training);
 			logger.info("Training guardado con exito");
 		}else {
 			logger.error("Error al guardar con el id :" + id);

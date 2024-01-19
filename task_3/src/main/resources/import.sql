@@ -1,0 +1,2 @@
+INSERT INTO "user" (firstName, lastName, userName, password, isActive) VALUES ('John', 'Doe', 'JohnDoe', 'secretpassword', true);
+INSERT INTO "training" (trainingName, training_duration) VALUES ('John',2 );

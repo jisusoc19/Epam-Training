@@ -4,7 +4,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -23,17 +26,24 @@ public class itranerController {
 	@Autowired
 	private iTrainerService itrainerservice;
 	
-	@RequestMapping(value = "/trainer/{id}", method = RequestMethod.GET)
+	@GetMapping("/apitrainer/{id}")
 	public Trainer findbyid(@PathVariable Long id){
 		return itrainerservice.findById(id);
 		
 		
 	}
-	@RequestMapping(value = "/trainer" , method = RequestMethod.POST)
+	@GetMapping("/trainer")
+	public void findAll(){
+		logger.info("iniciando itrainerControler Find all");
+		itrainerservice.findAll();
+		
+		
+	}
+	@PostMapping("/trainer")
 	public Trainer save(@RequestBody Trainer trainer) {
 		return itrainerservice.save(trainer);
 	}
-	@RequestMapping(value = "/trainer/{id}", method = RequestMethod.PUT)
+	@PutMapping("/trainer/{id}")
 	public Trainer update(@RequestBody Trainer trainer ,@PathVariable Long id) {
 		return itrainerservice.update(trainer, id);
 	}
