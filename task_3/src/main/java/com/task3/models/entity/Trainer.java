@@ -45,6 +45,22 @@ public class Trainer implements Serializable{
 	@OneToMany(mappedBy = "trainer_id")
 	private List<Training> traininglist;
 	
+	@Column(name = "firstName")
+	private String firstName;
+	
+	@Column(name = "lastName")
+	private String lastName;
+	
+	@Column(name = "pasword", unique = true)
+	private String password;
+	
+	@Column(name = "username", unique = true)
+	private String username;
+	
+	@Column(name = "isActive", nullable = false)
+	private Boolean isActive;
+	
+	
 	private static final long serialVersionUID = 1L;
 
 	public void init() {

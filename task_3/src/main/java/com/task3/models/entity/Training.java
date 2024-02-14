@@ -61,6 +61,8 @@ public class Training  implements Serializable{
 	private Long training_duration;
 
 
+	
+	
 	@PrePersist
 	public void prePersist() {
 		training_date = new Date();
@@ -70,6 +72,8 @@ public class Training  implements Serializable{
 	public void init() {
 		logger.info("Training Entity Creado");
 	}
+
+
 
 
 }

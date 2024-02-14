@@ -56,10 +56,27 @@ public class Trainee implements Serializable {
 	@OneToMany(mappedBy = "trainee_id")
 	List<Training> traininglist;
 	
+	@Column(name = "firstName", nullable = false)
+	private String firstName;
+	
+	@Column(name = "lastName", nullable = false)
+	private String lastName;
+	
+	@Column(name = "pasword", nullable = false, unique = true)
+	private String pasword;
+	
+	@Column(name = "username", nullable = false, unique = true)
+	private String username;
+	
+	@Column(name = "isActive", nullable = false)
+	private Boolean isActive;
+	
 	@PrePersist
 	public void prePersist() {
 		dateBirth = new Date();
 	}
+	
+	
 
 
 	public Trainee(String addres, User userid) {
@@ -70,10 +87,15 @@ public class Trainee implements Serializable {
 
 
 	private static final long serialVersionUID = 1L;
+	
 	@PostConstruct
 	public void init() {
 		logger.info("Trainee Entity Creado");
 	}
+
+
+
+	
 
 
 }

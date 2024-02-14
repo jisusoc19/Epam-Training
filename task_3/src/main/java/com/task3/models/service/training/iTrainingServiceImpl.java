@@ -33,7 +33,7 @@ public class iTrainingServiceImpl implements iTrainingService {
 		}
 		
 	}
-	@Transactional
+	@Transactional(readOnly = false)
 	@Override
 	public Training save(Training training, Long id) {
 		if(itrainindaoJPA.existsById(id)) {

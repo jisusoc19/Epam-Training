@@ -30,7 +30,6 @@ public class Training_Type implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 
-
 	private String trainingTypeName;
 	
 	

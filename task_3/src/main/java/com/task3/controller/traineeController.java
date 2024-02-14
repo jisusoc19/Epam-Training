@@ -11,6 +11,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import com.task3.models.entity.Trainee;
 import com.task3.models.service.trainee.iTraineeService;
+
+import RestHandlerException.ResouceNotFoundException;
+
+import java.util.List;
+
 import org.slf4j.Logger;
 import jakarta.annotation.PostConstruct;
 
@@ -21,19 +26,16 @@ public class traineeController {
 	private static final Logger logger = LoggerFactory.getLogger(traineeController.class);
 	
 	@Autowired
-	private final iTraineeService traineeservice;
+	private iTraineeService traineeservice;
 
-	public traineeController(iTraineeService traineeservice) {
-		logger.info("Controller GetAll iniciado");
-		this.traineeservice = traineeservice;
-	}
+	
 
 	@GetMapping("/trainee")
 	public void index(){
 		logger.info("Controller GetById iniciado");
 		traineeservice.findAll();
+		
 	}
-
 
 //	public Trainee findbyid(@PathVariable Long id) {
 //		return traineeservice.findById(id);
@@ -66,6 +68,17 @@ public class traineeController {
 		logger.info("Controller Update iniciado");
 		return traineeservice.update(trainee, id);
 		
+	}
+	@GetMapping("/Loggin")
+	@ResponseStatus(HttpStatus.OK)
+	public void loggin(@PathVariable String Username, String password){
+		logger.info("iniciando itrainerControler Find all");
+		traineeservice.loggin(Username, password);
+		
+	}
+	@PatchMapping("/trainee/{username}/{status}")
+	public Trainee updateTraineestatus(@PathVariable String username, Boolean status) {
+		return traineeservice.updateStatususername(username, status);
 	}
 
 }

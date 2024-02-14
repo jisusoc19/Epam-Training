@@ -7,14 +7,16 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 import com.task3.models.entity.Training;
+import com.task3.models.entity.User;
 
 import jakarta.annotation.PostConstruct;
 @Repository
-public interface iTrainingdao extends CrudRepository<Training, Long> {
+public interface iTrainingdao extends JpaRepository<Training, Long> {
 	Logger logger = LoggerFactory.getLogger(iTraineedao.class);
 	
 	@PostConstruct
 	public default void init() {
 		logger.info("itrainingedao iniciado");
 	}
+
 }

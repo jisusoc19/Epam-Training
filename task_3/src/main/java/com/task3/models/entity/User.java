@@ -40,7 +40,7 @@ public class User implements Serializable {
 	private String lastName;
 
 	@Column(nullable = false)
-	private String userName;
+	private String username;
 
 	@Column(nullable = false)
 	private String password;
@@ -54,14 +54,17 @@ public class User implements Serializable {
 	@OneToOne(mappedBy ="userid")
 	Trainer trainer;
 	
-    public User() {
+/*    public User() {
         this.userName = generaten(); 
     }
 
     private String generaten() {
+    	String nombrecompleto = firstName + lastName;
+    	if(nombrecompleto.e)
+    	
         return firstName + lastName;
     }
-
+*/
 	
 	public Long getId() {
 		return id;
