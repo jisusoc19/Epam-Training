@@ -24,6 +24,7 @@ public class userServiceTest {
 	
 	@InjectMocks
 	private iUserServiceImpl userservice;
+	 
 	
     
     @Test

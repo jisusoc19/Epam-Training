@@ -33,6 +33,7 @@ import static org.junit.jupiter.api.Assertions.*;
 @ExtendWith(SpringExtension.class)
 public class trainingServiceTest {
 	
+	
 	@Mock
 	private iTrainingdao trainingrepo;
 	

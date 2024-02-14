@@ -29,6 +29,7 @@ public class TrainingtypeServiTest {
 	
 	@InjectMocks
 	private trainingTypeImplem trainingtypeser;
+	 
 	
 	@Test
 	public void findAllTest() {

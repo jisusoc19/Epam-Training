@@ -9,6 +9,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import com.task3.models.Repository.iTraineedao;
@@ -30,8 +31,7 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-
-@ExtendWith(SpringExtension.class)
+@SpringBootTest
 public class traineeServiceTest {
 	@Mock
 	private iTraineedao traineeRepo;
@@ -150,6 +150,7 @@ public class traineeServiceTest {
 		assertEquals("john.doe11", username);
 	}
 
+	
 	@Test
 	public void generatePasswordLength() {
 

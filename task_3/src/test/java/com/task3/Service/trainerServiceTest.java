@@ -34,6 +34,7 @@ public class trainerServiceTest {
 	@Mock
 	private iTrainerdao trainerjpa;
 	
+	
 
 	@InjectMocks
 	private iTrainerServiceImpl trainerservice;
