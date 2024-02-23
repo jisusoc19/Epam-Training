@@ -13,10 +13,5 @@ import com.task3.models.entity.Training_Type;
 import jakarta.annotation.PostConstruct;
 @Repository
 public interface iTrainer_TypeRepo extends CrudRepository<Training_Type,Long> {
-	Logger logger = LoggerFactory.getLogger(iTraineedao.class);
-	
-	@PostConstruct
-	public default void init() {
-		logger.info("itraier_type iniciado");
-	}
+
 }

@@ -21,10 +21,11 @@ import com.task3.models.entity.User;
 
 import RestHandlerException.ResouceNotFoundException;
 import jakarta.annotation.PostConstruct;
-
+import lombok.extern.slf4j.Slf4j;
+@Slf4j
 @Service
 public class iTrainerServiceImpl implements iTrainerService {
-	private static final Logger logger = LoggerFactory.getLogger(iTrainerServiceImpl.class);
+	
 	
 	@Autowired
 	public iTrainerdao itrainerdaoJPA;
@@ -33,10 +34,11 @@ public class iTrainerServiceImpl implements iTrainerService {
 	@Override
 	public Trainer save(Trainer trainer) {
 		if(trainer==null || trainer.getIsActive()==null) {
+			log.error("Error en trainer save");
 			throw new ResouceNotFoundException("Error al guardar" );
 		} else {
 			itrainerdaoJPA.save(trainer);
-			logger.info("trainer guardado con exito");
+			log.info("trainer guardado con exito");
 			
 		}
 		return trainer;
@@ -45,10 +47,10 @@ public class iTrainerServiceImpl implements iTrainerService {
 	@Override
 	public Trainer findById(Long id) {
 		if(itrainerdaoJPA.findById(id) == null || itrainerdaoJPA.findById(id).isEmpty()) {
-			logger.error("Trainer con id: " + id + "No encontrado");
+			log.error("Trainer con id: " + id + "No encontrado");
 			throw new ResouceNotFoundException("cliente", "id" ,id);
 		}else {
-			logger.info("Trainer encontrado con id: " + id + " Encontrado " );
+			log.info("Trainer encontrado con id: " + id + " Encontrado " );
 			return itrainerdaoJPA.findById(id).orElse(null);
 		}
 		
@@ -60,6 +62,7 @@ public class iTrainerServiceImpl implements iTrainerService {
 		Trainer nuevotra=null;
 	    if (!itrainerdaoJPA.findById(id).isPresent()) {
 	        // Update the trainer
+	    	log.error("error en Trainer update" );
 	    	throw new ResouceNotFoundException("Trainer with ID " + id + " no update in the database");
 	    }else {
 	    	Aactual.setFirstName(trainer.getFirstName());
@@ -67,7 +70,7 @@ public class iTrainerServiceImpl implements iTrainerService {
 	    	Aactual.setUsername(generateUniqueUsername(trainer.getFirstName(),trainer.getLastName()));
 	    	Aactual.setTrainertype(trainer.getTrainertype());
 	    	nuevotra =itrainerdaoJPA.save(Aactual);
-	    	logger.info("Trainer actualizado");
+	    	log.info("Trainer actualizado");
 	    	return nuevotra;
 	    }
 	
@@ -77,7 +80,7 @@ public class iTrainerServiceImpl implements iTrainerService {
 	
 	@PostConstruct
 	public void init() {
-		logger.info("Iniciando el iTrainerServiceImpl");
+		log.info("Iniciando el iTrainerServiceImpl");
 	}
 	
 	@Transactional(readOnly = true)
@@ -85,8 +88,10 @@ public class iTrainerServiceImpl implements iTrainerService {
 	public List<Trainer> findAll() {
 		List<Trainer> lista = (List<Trainer>) itrainerdaoJPA.findAll();
 		if(lista==null || lista.isEmpty()) {
+			log.error("Lista de Trainer no encontrada" );
 			throw new ResouceNotFoundException("clientes");
 		}
+		log.info("Lista de Trainer encontrada" );
 		return (List<Trainer>) itrainerdaoJPA.findAll();
 	}
 	
@@ -100,7 +105,7 @@ public class iTrainerServiceImpl implements iTrainerService {
 			username = gUsername + nSerail;
 			nSerail++;
 		}
-		
+		log.info("Trainer con username unico generado");
 		return username;
 	}
 	@Transactional
@@ -114,7 +119,8 @@ public class iTrainerServiceImpl implements iTrainerService {
         for (int i = 0; i < length; i++) {
             int randomIndex = random.nextInt(letras.length());
             sb.append(letras.charAt(randomIndex));
-        }  
+        }
+        log.info("Contraseña Generada de Trainer");
         return sb.toString();
     }
 		
@@ -124,9 +130,11 @@ public class iTrainerServiceImpl implements iTrainerService {
 	public Trainer findbyusername(String username) {
 		Trainer trainer =itrainerdaoJPA.findbyusername(username).orElse(null);
 		if (itrainerdaoJPA.findbyusername(username).isPresent()) {
+			log.info("Trainer encontrado con el username:" + username );
 			return trainer;
 			
 		}else {
+			log.error("Trainer no encontrado con el username:" + username );
 			throw new ResouceNotFoundException();
 		}
 		
@@ -138,9 +146,11 @@ public class iTrainerServiceImpl implements iTrainerService {
 		Trainer traineeE = itrainerdaoJPA.findbyusername(username).orElse(null);
 		if(itrainerdaoJPA.findbyusername(username).isPresent()) {
 			if(traineeE.getPassword().equals(Password));
+			log.info("Trainer iniciado sesion con el username:" + username );
 			return true;			
 		}
 		else {
+			log.error("Error con el iniciado de sesion del Trainer con el username:" + username );
 			return false;
 		}
 		
@@ -153,9 +163,11 @@ public class iTrainerServiceImpl implements iTrainerService {
 			if(trainerE.getPassword().equals(Passwordold));
 			trainerE.setPassword(PasswordNew);
 			itrainerdaoJPA.save(trainerE);
+			log.info("Trainer con el username:" + username + " inicio de sesion actualizado con exito " );
 			return trainerE;			
 		}
 		else {
+			log.error("Error conla actualizacion de inicio de sesion del Trainer con el username:" + username );
 			return null;
 		}
 	}
@@ -167,7 +179,9 @@ public class iTrainerServiceImpl implements iTrainerService {
 		if(itrainerdaoJPA.findbyusername(username).isPresent()) {
 			trainer.setIsActive(status);
 			itrainerdaoJPA.save(trainer);
+			log.info("Trainer con el username:" + username + " Status cambiado" );
 		}else {
+			log.error("Trainer con el username:" + username + " no se pudo cambiar el Status" );
 			throw new ResouceNotFoundException();
 		}
 		

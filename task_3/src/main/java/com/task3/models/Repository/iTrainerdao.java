@@ -15,7 +15,7 @@ import com.task3.models.entity.Trainer;
 import jakarta.annotation.PostConstruct;
 @Repository
 public interface iTrainerdao extends JpaRepository<Trainer,Long> {
-	Logger logger = LoggerFactory.getLogger(iTraineedao.class);
+	
 	//Trainer findByUsername(String username);
 	@Transactional
 	@Query("SELECT t FROM Trainer t WHERE t.username = :username")
@@ -25,8 +25,5 @@ public interface iTrainerdao extends JpaRepository<Trainer,Long> {
 	@Query("SELECT t FROM Trainer t WHERE t.username = :username AND t.password = :password")
 	Optional<Trainer> loggin(String username, String password );
 	
-	@PostConstruct
-	public default void init() {
-		logger.info("itrainerdao iniciado");
-	}
+
 }

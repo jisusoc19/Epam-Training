@@ -14,13 +14,10 @@ import com.task3.models.entity.User;
 import jakarta.annotation.PostConstruct;
 @Repository
 public interface iUserRepository extends CrudRepository<User, Long>{
-	Logger logger = LoggerFactory.getLogger(iTraineedao.class);
+	
 	
 	@Transactional
 	@Query("SELECT t FROM User t WHERE t.username=:username")
 	Optional<User> findByUsername(String username);
-	@PostConstruct
-	public default void init() {
-		logger.info("iUserRepo iniciado");
-	}
+
 }

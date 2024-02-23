@@ -1,6 +1,7 @@
 package com.task3.models.service.trainee;
 
 import java.util.List;
+
 import java.util.Optional;
 import java.util.Random;
 
@@ -22,10 +23,12 @@ import com.task3.models.entity.User;
 
 import RestHandlerException.ResouceNotFoundException;
 import jakarta.annotation.PostConstruct;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 @Service
 public class iTraineServiceImpl implements iTraineeService {
-	private static final Logger logger = LoggerFactory.getLogger(Task3Application.class);
+	
 
 	@Autowired
 	private iTraineedao trainerdaoJpa;
@@ -37,7 +40,7 @@ public class iTraineServiceImpl implements iTraineeService {
 		if(lista==null || lista.isEmpty()) {
 			throw new ResouceNotFoundException("clientes");
 		}
-		logger.info("Lista de Trainee Ejecutada");
+		log.info("Lista de Trainee Ejecutada");
 		return (List<Trainee>) trainerdaoJpa.findAll();
 	}
 
@@ -45,10 +48,10 @@ public class iTraineServiceImpl implements iTraineeService {
 	@Override
 	public Trainee findById(Long id) {
 		if (trainerdaoJpa.findById(id) == null || trainerdaoJpa.findById(id).isEmpty() ) {
-			logger.error("No se encontró el trainee con el id: " + id);
+			log.error("No se encontró el trainee con el id: " + id);
 			throw new ResouceNotFoundException("cliente", "id" ,id);
 		} else {
-			logger.info("Trainee con el id: " + id + " encontrado con éxito.");
+			log.info("Trainee con el id: " + id + " encontrado con éxito.");
 			return trainerdaoJpa.findById(id).orElse(null);
 		}
 	}
@@ -57,13 +60,13 @@ public class iTraineServiceImpl implements iTraineeService {
 	@Override
 	public Trainee save(Trainee trainee) {
 		if(trainee==null ) {
-			logger.error("Error en guardar" );
+			log.error("Error en guardar" );
 			throw new NullPointerException("Error al guardar" );
 		} else {
 			trainee.setUsername(generateUniqueUsername(trainee.getFirstName(),trainee.getLastName()));
 			trainee.setPasword(generatePasword(trainee.getPasword()));
 			trainerdaoJpa.save(trainee);
-			logger.info("Trainee guardado con exito");
+			log.info("Trainee guardado con exito");
 			return trainee;
 		}
 		
@@ -77,14 +80,14 @@ public class iTraineServiceImpl implements iTraineeService {
 		}	
 		else{
 			trainerdaoJpa.deleteById(id);
-			logger.info("trainee con el id :" + id + " eliminado con exito");
+			log.info("trainee con el id :" + id + " eliminado con exito");
 			
 		}
 	}
 
 	@PostConstruct
 	public void init() {
-		logger.info("iTraineServiceImpl ha sido inicializado");
+		log.info("iTraineServiceImpl ha sido inicializado");
 	}
 
 	@Transactional
@@ -100,7 +103,7 @@ public class iTraineServiceImpl implements iTraineeService {
 			Aactual.setIsActive(trainee.getIsActive());
 			Aactual.setUsername(generateUniqueUsername(trainee.getFirstName(),trainee.getLastName()));
 			Aactual.setAddres(trainee.getAddres());
-			logger.info("Trainer actualizado");
+			log.info("Trainer actualizado");
 			nuevotra =trainerdaoJpa.save(Aactual);
 			return nuevotra;
 		}
@@ -116,6 +119,7 @@ public class iTraineServiceImpl implements iTraineeService {
 			gUsername = gUsername + n;
 			n++;
 		}
+		log.info("Trainer usuario unico generado");
 		return gUsername;
 	}
 	@Transactional
@@ -129,7 +133,8 @@ public class iTraineServiceImpl implements iTraineeService {
         for (int i = 0; i < length; i++) {
             int randomIndex = random.nextInt(letras.length());
             sb.append(letras.charAt(randomIndex));
-        }  
+        }
+        log.info("Trainer contraseña generada");
         return sb.toString();
     }
 		
@@ -139,9 +144,11 @@ public class iTraineServiceImpl implements iTraineeService {
 	public Trainee findbyusername(String username) {
 		Trainee trainer =trainerdaoJpa.findbyusername(username).orElse(null);
 		if (trainerdaoJpa.findbyusername(username).isPresent()) {
+			log.info("Trainer con el usuario " + username + " encontrado");
 			return trainer;
 			
 		}else {
+			log.error("Trainer con el usuario " + username + " no encontrado");
 			throw new ResouceNotFoundException();
 		}
 	}
@@ -152,9 +159,11 @@ public class iTraineServiceImpl implements iTraineeService {
 		Trainee traineeE = trainerdaoJpa.findbyusername(username).orElse(null);
 		if(trainerdaoJpa.findbyusername(username).isPresent()) {
 			if(traineeE.getPasword().equals(Password));
+			log.info("Trainer " + username + " iniciado sesion ");
 			return true;			
 		}
 		else {
+			log.info("Trainer " + username + " sesion no iniciada ");
 			return false;
 		}
 		
@@ -167,9 +176,11 @@ public class iTraineServiceImpl implements iTraineeService {
 			if(traineeE.getPasword().equals(Passwordold));
 			traineeE.setPasword(PasswordNew);
 			trainerdaoJpa.save(traineeE);
+			log.info("Trainer " + username + " actualizado el loggin ");
 			return traineeE;			
 		}
 		else {
+			log.error("Trainer " + username + " no actualizado el loggin ");
 			return null;
 		}
 	}
@@ -178,7 +189,9 @@ public class iTraineServiceImpl implements iTraineeService {
 	public void deleteByusername(String username) {
 		if(trainerdaoJpa.findbyusername(username).isPresent()) {
 			trainerdaoJpa.deleteByUsername(username);
+			log.info("Trainer " + username + "eliminado con exito");
 		}else {
+			log.error("Trainer " + username + "eliminacion sin exito");
 			throw new ResouceNotFoundException();
 		}
 		
@@ -190,6 +203,7 @@ public class iTraineServiceImpl implements iTraineeService {
 		Trainee traineeA = trainerdaoJpa.findbyusername(username).orElse(null);
 		traineeA.setIsActive(status);
 		trainerdaoJpa.save(traineeA);
+		log.info("Trainer " + username + "status cambiado");
 		return traineeA;
 	}
 

@@ -6,9 +6,13 @@ import org.springframework.stereotype.Service;
 
 import com.task3.models.Repository.iUserRepository;
 import com.task3.models.entity.User;
+
+import lombok.extern.slf4j.Slf4j;
+
 import java.util.Random;
 
 @Service
+@Slf4j
 public class iUserServiceImpl implements iUserService {
 
 	@Autowired
@@ -23,6 +27,7 @@ public class iUserServiceImpl implements iUserService {
 			username = gUsername + nSerail;
 			nSerail++;
 		}
+		log.info("user con username unico generado");
 		return username;
 	}
 	@Override
@@ -35,7 +40,8 @@ public class iUserServiceImpl implements iUserService {
         for (int i = 0; i < length; i++) {
             int randomIndex = random.nextInt(letras.length());
             sb.append(letras.charAt(randomIndex));
-        }  
+        }
+        log.info("user generado con contraseña");
         return sb.toString();
     }
 		

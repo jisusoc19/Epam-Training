@@ -29,14 +29,16 @@ import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.extern.slf4j.Slf4j;
 
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
 @Data
+@Slf4j
 @Table(name = "Trainee")
 public class Trainee implements Serializable {
-	private static final Logger logger = LoggerFactory.getLogger(Trainee.class);
+
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -90,7 +92,7 @@ public class Trainee implements Serializable {
 	
 	@PostConstruct
 	public void init() {
-		logger.info("Trainee Entity Creado");
+		log.info("Trainee Entity Creado");
 	}
 
 

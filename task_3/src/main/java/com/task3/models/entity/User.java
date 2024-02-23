@@ -20,14 +20,16 @@ import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
 
 @AllArgsConstructor
 @Entity
 @Data
 @Table(name = "usergym")
+@Slf4j
 public class User implements Serializable {
-	private static final Logger logger = LoggerFactory.getLogger(User.class);
+
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -53,25 +55,11 @@ public class User implements Serializable {
 	
 	@OneToOne(mappedBy ="userid")
 	Trainer trainer;
-	
-/*    public User() {
-        this.userName = generaten(); 
-    }
 
-    private String generaten() {
-    	String nombrecompleto = firstName + lastName;
-    	if(nombrecompleto.e)
-    	
-        return firstName + lastName;
-    }
-*/
-	
-	public Long getId() {
-		return id;
-	}
+
 	private static final long serialVersionUID = 1L;
 	public void init() {
-		logger.info("User Entity Creado");
+		log.info("User Entity Creado");
 	}
 
 }

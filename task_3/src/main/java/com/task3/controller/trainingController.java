@@ -12,22 +12,25 @@ import com.task3.models.entity.Training;
 import com.task3.models.service.training.iTrainingService;
 
 import jakarta.annotation.PostConstruct;
+import lombok.extern.slf4j.Slf4j;
 
 @RestController
+@Slf4j
 @RequestMapping("/apitraining")
 public class trainingController {
 	
-	private static final Logger logger = LoggerFactory.getLogger(traineeController.class);
+	
 	
 	@Autowired
 	private iTrainingService itrainingservice;
 	
 	@GetMapping("/training/{id}")
 	public Training findall(@PathVariable Long id) {
+		log.info("iniciando trainingController TRAINING");
 		return itrainingservice.findbyid(id);
 	}
 	@PostConstruct
 	public void init() {
-		logger.info("iniciando Controlador TRAINING");
+		log.info("iniciando trainingController ");
 	}
 }

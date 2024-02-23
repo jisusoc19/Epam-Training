@@ -15,10 +15,11 @@ import org.springframework.transaction.annotation.Transactional;
 import com.task3.models.entity.Trainee;
 
 import jakarta.annotation.PostConstruct;
+import lombok.extern.slf4j.Slf4j;
 
 public interface iTraineedao extends CrudRepository<Trainee,Long> {
 	
-	Logger logger = LoggerFactory.getLogger(iTraineedao.class);
+	
 	@Transactional
 	@Query("SELECT t FROM Trainer t WHERE t.username = :username")
 	Optional<Trainee> findbyusername(String username);
@@ -31,10 +32,6 @@ public interface iTraineedao extends CrudRepository<Trainee,Long> {
     @Query("DELETE FROM Trainer t WHERE t.username = :username")
     void deleteByUsername(String username);
     
-    
-	@PostConstruct
-	public default void init() {
-		logger.info("itraineedao iniciado");
-	}
+   
 
 }

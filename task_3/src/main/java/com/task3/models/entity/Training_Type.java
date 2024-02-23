@@ -19,13 +19,15 @@ import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 @NoArgsConstructor
 @AllArgsConstructor  
 @Entity
 @Data
+@Slf4j
 @Table(name = "training_type")
 public class Training_Type implements Serializable {
-	private static final Logger logger = LoggerFactory.getLogger(Training_Type.class);
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
@@ -41,7 +43,7 @@ public class Training_Type implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 	public void init() {
-		logger.info("Training_type Entity Creado");
+		log.info("Training_type Entity Creado");
 	}
 
 }

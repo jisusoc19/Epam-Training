@@ -9,6 +9,8 @@ import org.springframework.stereotype.Service;
 import com.task3.models.entity.Trainee;
 import com.task3.models.entity.User;
 
+import lombok.extern.slf4j.Slf4j;
+
 @Service
 public interface iTraineeService {
 	public List<Trainee> findAll();

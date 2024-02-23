@@ -1,6 +1,7 @@
 package com.task3.models.service.training;
 
 import java.util.Map;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,9 +13,11 @@ import com.task3.models.Repository.iTrainingdao;
 import com.task3.models.entity.Training;
 
 import jakarta.annotation.PostConstruct;
+import lombok.extern.slf4j.Slf4j;
+@Slf4j
 @Service
 public class iTrainingServiceImpl implements iTrainingService {
-	private static final Logger logger = LoggerFactory.getLogger(iTrainingServiceImpl.class);
+	
 
 	@Autowired
 	private iTrainingdao itrainindaoJPA;
@@ -24,11 +27,11 @@ public class iTrainingServiceImpl implements iTrainingService {
 	public Training findbyid(Long id) {
 		// TODO Auto-generated method stub
 		if(itrainindaoJPA.existsById(id)) {
-			logger.info("Training con el id " + id + " Seleccionado");
+			log.info("Training con el id " + id + " Seleccionado");
 			
 			return itrainindaoJPA.findById(id).orElseGet(null);
 		}else {
-			logger.error("Training con el id " + id + " no encontrado");
+			log.error("Training con el id " + id + " no encontrado");
 			return null;
 		}
 		
@@ -38,16 +41,16 @@ public class iTrainingServiceImpl implements iTrainingService {
 	public Training save(Training training, Long id) {
 		if(itrainindaoJPA.existsById(id)) {
 			itrainindaoJPA.save(training);
-			logger.info("Training guardado con exito");
+			log.info("Training guardado con exito");
 		}else {
-			logger.error("Error al guardar con el id :" + id);
+			log.error("Error al guardar el Training con el id :" + id);
 			return null;
 		}
 		return training;
 	}
 	@PostConstruct
 	public void init() {
-		logger.info("Iniciando el iTrainingServiceimpl");
+		log.info("Iniciando el iTrainingServiceimpl");
 	}
 
 }

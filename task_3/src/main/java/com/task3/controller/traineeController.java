@@ -18,12 +18,12 @@ import java.util.List;
 
 import org.slf4j.Logger;
 import jakarta.annotation.PostConstruct;
+import lombok.extern.slf4j.Slf4j;
 
 @RestController
+@Slf4j
 @RequestMapping("/apitrainee")
 public class traineeController {
-	
-	private static final Logger logger = LoggerFactory.getLogger(traineeController.class);
 	
 	@Autowired
 	private iTraineeService traineeservice;
@@ -32,7 +32,7 @@ public class traineeController {
 
 	@GetMapping("/trainee")
 	public void index(){
-		logger.info("Controller GetById iniciado");
+		log.info("traineeControler GetList iniciado");
 		traineeservice.findAll();
 		
 	}
@@ -43,41 +43,43 @@ public class traineeController {
 //	}
 	@PostMapping("/trainee")
 	public Trainee save(@RequestBody Trainee trainee) {
+		log.info("traineeControler save iniciado");
 		return traineeservice.save(trainee);
 
 	}
 	@GetMapping("/trainee/{id}")
 	public Trainee findById(@PathVariable Long id){
-		logger.info("Controller GetById iniciado");
+		log.info("traineeControler GetById iniciado");
 		return traineeservice.findById(id);
 
 	}
 	@DeleteMapping("/trainee/{id}")
 	public ResponseEntity<String> delete(@PathVariable Long id) {
-		logger.info("Controller Delete iniciado");
+		log.info("traineeControler delete iniciado");
 		traineeservice.delete(id);
 		return new ResponseEntity<>("Trainee eliminado con exito",HttpStatus.OK);
 	}
 	
 	@PostConstruct
 	public void init() {
-		logger.info("Controller iniciado");
+		log.info("traineeControler iniciado");
 	}
 	@PutMapping("/trainee/{id}")
 	public Trainee update(@RequestBody Trainee trainee , @PathVariable Long id) {
-		logger.info("Controller Update iniciado");
+		log.info("traineeControler Update iniciado");
 		return traineeservice.update(trainee, id);
 		
 	}
 	@GetMapping("/Loggin")
 	@ResponseStatus(HttpStatus.OK)
 	public void loggin(@PathVariable String Username, String password){
-		logger.info("iniciando itrainerControler Find all");
+		log.info("iniciando itraineeControler loggin");
 		traineeservice.loggin(Username, password);
 		
 	}
 	@PatchMapping("/trainee/{username}/{status}")
 	public Trainee updateTraineestatus(@PathVariable String username, Boolean status) {
+		log.info("iniciando traineeControler updateTraineestatus ");
 		return traineeservice.updateStatususername(username, status);
 	}
 

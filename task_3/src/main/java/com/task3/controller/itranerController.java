@@ -22,11 +22,12 @@ import com.task3.models.entity.Trainer;
 import com.task3.models.service.trainer.iTrainerService;
 
 import jakarta.annotation.PostConstruct;
+import lombok.extern.slf4j.Slf4j;
 @RestController
 @RequestMapping("/apitrainer")
+@Slf4j
 public class itranerController {
 	
-	private static final Logger logger = LoggerFactory.getLogger(itranerController.class);
 	
 	@Autowired
 	private iTrainerService itrainerservice;
@@ -34,25 +35,28 @@ public class itranerController {
 	
 	@GetMapping("/trainer/{id}")
 	public Trainer findbyid(@PathVariable Long id){
+		log.info("iniciando itrainerControler findById");
 		return itrainerservice.findById(id);
 		
 		
 	}
 	@GetMapping("/trainer/username/{username}")
 	public Trainer findbyusername(@PathVariable String username){
+		log.info("iniciando itrainerControler findByUsername");
 		return itrainerservice.findbyusername(username);
 		
 		
 	}
 	@GetMapping("/trainer")
 	public void findAll(){
-		logger.info("iniciando itrainerControler Find all");
+		log.info("iniciando itrainerControler Find all");
 		itrainerservice.findAll();
 		
 		
 	}
 	@PostMapping("/trainer")
 	public Trainer save(@RequestBody Trainer trainer) {
+		log.info("iniciando itrainerControler save");
 		return itrainerservice.save(trainer);
 	}
 	@PutMapping("/trainer/{id}")
@@ -62,12 +66,12 @@ public class itranerController {
 	
 	@PostConstruct
 	public void init() {
-		logger.info("iniciando itrainerController");
+		log.info("iniciando itrainerController");
 	}
 	@GetMapping("/Loggin")
 	@ResponseStatus(HttpStatus.OK)
 	public void loggin(@PathVariable String Username, String password){
-		logger.info("iniciando itrainerControler Find all");
+		log.info("iniciando itrainerControler Find all");
 		itrainerservice.loggin(Username, password);
 		
 		
@@ -75,7 +79,7 @@ public class itranerController {
 	
 	@PatchMapping("/trainer/active")
 	public Trainer active(@PathVariable String username, Boolean status){
-		logger.info("iniciando itrainerControler active");
+		log.info("iniciando itrainerControler active");
 		return itrainerservice.activeTranierTrainee(username, status);
 	}
 	
