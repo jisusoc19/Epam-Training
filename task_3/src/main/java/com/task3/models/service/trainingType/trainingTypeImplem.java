@@ -34,6 +34,7 @@ public class trainingTypeImplem implements training_typeService {
 		return lista;
 	}
 	
+	
 	@PostConstruct
 	public void init() {
 		log.info("trainingTypeImplem iniciado");
