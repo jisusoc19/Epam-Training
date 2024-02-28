@@ -1,4 +1,4 @@
-package com.task3.controller;
+package com.task3.Controller;
 
 import java.util.List;
 
@@ -14,6 +14,7 @@ import com.task3.models.service.trainingType.training_typeService;
 public class trainingtypeController {
 	@Autowired
 	private training_typeService trainingtypeservice;
+	
 	
 	@GetMapping("/list")
 	public void findAll(){
