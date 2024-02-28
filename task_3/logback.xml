@@ -1,654 +1,86 @@
-2024-02-23T11:20:07.941-05:00  INFO 20120 --- [restartedMain] com.task3.Task3Application               : Starting Task3Application using Java 19.0.2 with PID 20120 (C:\Users\USER\git\task3\task_3\target\classes started by USER in C:\Users\USER\git\task3\task_3)
-2024-02-23T11:20:07.944-05:00  INFO 20120 --- [restartedMain] com.task3.Task3Application               : The following 1 profile is active: "dev"
-2024-02-23T11:20:07.978-05:00  INFO 20120 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-02-23T11:20:07.978-05:00  INFO 20120 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-02-23T11:20:08.711-05:00  INFO 20120 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-02-23T11:20:08.758-05:00  INFO 20120 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 42 ms. Found 5 JPA repository interfaces.
-2024-02-23T11:20:09.274-05:00  INFO 20120 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8090 (http)
-2024-02-23T11:20:09.281-05:00  INFO 20120 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-02-23T11:20:09.281-05:00  INFO 20120 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
-2024-02-23T11:20:09.318-05:00  INFO 20120 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-02-23T11:20:09.318-05:00  INFO 20120 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1339 ms
-2024-02-23T11:20:09.432-05:00  INFO 20120 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-02-23T11:20:09.565-05:00  INFO 20120 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
-2024-02-23T11:20:09.566-05:00  INFO 20120 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-02-23T11:20:09.574-05:00  INFO 20120 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:testdb'
-2024-02-23T11:20:09.719-05:00  INFO 20120 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-02-23T11:20:09.754-05:00  INFO 20120 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
-2024-02-23T11:20:09.778-05:00  INFO 20120 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-02-23T11:20:09.927-05:00  INFO 20120 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-02-23T11:20:09.961-05:00  WARN 20120 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-02-23T11:20:10.442-05:00  INFO 20120 --- [restartedMain] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: com.task3.models.entity.User (class must be instantiated by Interceptor)
-2024-02-23T11:20:10.608-05:00  INFO 20120 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-02-23T11:20:10.665-05:00  INFO 20120 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-02-23T11:20:10.675-05:00  INFO 20120 --- [restartedMain] com.task3.Task3Application               : main ha sido inicializado
-2024-02-23T11:20:10.894-05:00  INFO 20120 --- [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2024-02-23T11:20:11.125-05:00  INFO 20120 --- [restartedMain] c.t.m.s.trainer.iTrainerServiceImpl      : Iniciando el iTrainerServiceImpl
-2024-02-23T11:20:11.142-05:00  INFO 20120 --- [restartedMain] com.task3.controller.itranerController   : iniciando itrainerController
-2024-02-23T11:20:11.171-05:00  INFO 20120 --- [restartedMain] com.task3.Task3Application               : iTraineServiceImpl ha sido inicializado
-2024-02-23T11:20:11.178-05:00  INFO 20120 --- [restartedMain] com.task3.controller.traineeController   : Controller iniciado
-2024-02-23T11:20:11.201-05:00  INFO 20120 --- [restartedMain] c.t.m.s.training.iTrainingServiceImpl    : Iniciando el iTrainingServiceimpl
-2024-02-23T11:20:11.207-05:00  INFO 20120 --- [restartedMain] com.task3.controller.traineeController   : iniciando Controlador TRAINING
-2024-02-23T11:20:11.516-05:00  INFO 20120 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/actuator'
-2024-02-23T11:20:11.568-05:00  WARN 20120 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-02-23T11:20:12.176-05:00  INFO 20120 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2024-02-23T11:20:12.231-05:00  INFO 20120 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8090 (http) with context path ''
-2024-02-23T11:20:12.242-05:00  INFO 20120 --- [restartedMain] com.task3.Task3Application               : Started Task3Application in 4.593 seconds (process running for 5.05)
-2024-02-23T11:20:12.837-05:00  INFO 20120 --- [http-nio-8090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-02-23T11:20:12.838-05:00  INFO 20120 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-02-23T11:20:12.839-05:00  INFO 20120 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2024-02-23T11:43:36.897-05:00  INFO 18840 --- [restartedMain] com.task3.Task3Application               : Starting Task3Application using Java 19.0.2 with PID 18840 (C:\Users\USER\git\task3\task_3\target\classes started by USER in C:\Users\USER\git\task3\task_3)
-2024-02-23T11:43:36.898-05:00  INFO 18840 --- [restartedMain] com.task3.Task3Application               : The following 1 profile is active: "dev"
-2024-02-23T11:43:36.929-05:00  INFO 18840 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-02-23T11:43:36.929-05:00  INFO 18840 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-02-23T11:43:37.626-05:00  INFO 18840 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-02-23T11:43:37.672-05:00  INFO 18840 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 41 ms. Found 5 JPA repository interfaces.
-2024-02-23T11:43:38.159-05:00  INFO 18840 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8090 (http)
-2024-02-23T11:43:38.166-05:00  INFO 18840 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-02-23T11:43:38.166-05:00  INFO 18840 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
-2024-02-23T11:43:38.203-05:00  INFO 18840 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-02-23T11:43:38.203-05:00  INFO 18840 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1274 ms
-2024-02-23T11:43:38.327-05:00  INFO 18840 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-02-23T11:43:38.465-05:00  INFO 18840 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
-2024-02-23T11:43:38.466-05:00  INFO 18840 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-02-23T11:43:38.473-05:00  INFO 18840 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:testdb'
-2024-02-23T11:43:38.610-05:00  INFO 18840 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-02-23T11:43:38.647-05:00  INFO 18840 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
-2024-02-23T11:43:38.671-05:00  INFO 18840 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-02-23T11:43:38.819-05:00  INFO 18840 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-02-23T11:43:38.852-05:00  WARN 18840 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-02-23T11:43:39.303-05:00  INFO 18840 --- [restartedMain] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: com.task3.models.entity.User (class must be instantiated by Interceptor)
-2024-02-23T11:43:39.459-05:00  INFO 18840 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-02-23T11:43:39.514-05:00  INFO 18840 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-02-23T11:43:39.524-05:00  INFO 18840 --- [restartedMain] com.task3.Task3Application               : main ha sido inicializado
-2024-02-23T11:43:39.727-05:00  INFO 18840 --- [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2024-02-23T11:43:39.949-05:00  INFO 18840 --- [restartedMain] c.t.m.s.trainer.iTrainerServiceImpl      : Iniciando el iTrainerServiceImpl
-2024-02-23T11:43:39.965-05:00  INFO 18840 --- [restartedMain] com.task3.controller.itranerController   : iniciando itrainerController
-2024-02-23T11:43:39.994-05:00  INFO 18840 --- [restartedMain] com.task3.Task3Application               : iTraineServiceImpl ha sido inicializado
-2024-02-23T11:43:40.001-05:00  INFO 18840 --- [restartedMain] com.task3.controller.traineeController   : Controller iniciado
-2024-02-23T11:43:40.022-05:00  INFO 18840 --- [restartedMain] c.t.m.s.training.iTrainingServiceImpl    : Iniciando el iTrainingServiceimpl
-2024-02-23T11:43:40.027-05:00  INFO 18840 --- [restartedMain] com.task3.controller.traineeController   : iniciando Controlador TRAINING
-2024-02-23T11:43:40.315-05:00  INFO 18840 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/actuator'
-2024-02-23T11:43:40.366-05:00  WARN 18840 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-02-23T11:43:40.952-05:00  WARN 18840 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2024-02-23T11:43:40.996-05:00  WARN 18840 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
-2024-02-23T11:43:40.999-05:00  INFO 18840 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-02-23T11:43:41.003-05:00  WARN 18840 --- [restartedMain] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de datos ya esta cerrada (para des-habilitar el cerrado automatico durante el shutdown de la VM, agregue ";DB_CLOSE_ON_EXIT=FALSE" a la URL de conexión)
+2024-02-27T12:03:14.766-05:00  INFO 17280 --- [restartedMain] com.task3.Task3Application               : Starting Task3Application using Java 19.0.2 with PID 17280 (C:\Users\USER\git\task3\task_3\target\classes started by USER in C:\Users\USER\git\task3\task_3)
+2024-02-27T12:03:14.770-05:00  INFO 17280 --- [restartedMain] com.task3.Task3Application               : The following 1 profile is active: "dev"
+2024-02-27T12:03:14.808-05:00  INFO 17280 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-02-27T12:03:14.808-05:00  INFO 17280 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-02-27T12:03:15.530-05:00  INFO 17280 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-27T12:03:15.577-05:00  INFO 17280 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 41 ms. Found 5 JPA repository interfaces.
+2024-02-27T12:03:16.097-05:00  INFO 17280 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8090 (http)
+2024-02-27T12:03:16.104-05:00  INFO 17280 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-02-27T12:03:16.104-05:00  INFO 17280 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2024-02-27T12:03:16.141-05:00  INFO 17280 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-02-27T12:03:16.141-05:00  INFO 17280 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1333 ms
+2024-02-27T12:03:16.257-05:00  INFO 17280 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-02-27T12:03:16.391-05:00  INFO 17280 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2024-02-27T12:03:16.392-05:00  INFO 17280 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-02-27T12:03:16.399-05:00  INFO 17280 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:testdb'
+2024-02-27T12:03:16.537-05:00  INFO 17280 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-27T12:03:16.574-05:00  INFO 17280 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
+2024-02-27T12:03:16.599-05:00  INFO 17280 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-02-27T12:03:16.752-05:00  INFO 17280 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-27T12:03:16.786-05:00  WARN 17280 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-02-27T12:03:17.246-05:00  INFO 17280 --- [restartedMain] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: com.task3.models.entity.User (class must be instantiated by Interceptor)
+2024-02-27T12:03:17.403-05:00  INFO 17280 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-27T12:03:17.458-05:00  INFO 17280 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-27T12:03:17.468-05:00  INFO 17280 --- [restartedMain] com.task3.Task3Application               : main ha sido inicializado
+2024-02-27T12:03:17.671-05:00  INFO 17280 --- [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-02-27T12:03:17.892-05:00  INFO 17280 --- [restartedMain] c.t.m.s.trainer.iTrainerServiceImpl      : Iniciando el iTrainerServiceImpl
+2024-02-27T12:03:17.909-05:00  INFO 17280 --- [restartedMain] com.task3.controller.itranerController   : iniciando itrainerController
+2024-02-27T12:03:17.937-05:00  INFO 17280 --- [restartedMain] c.t.m.s.trainee.iTraineServiceImpl       : iTraineServiceImpl ha sido inicializado
+2024-02-27T12:03:17.944-05:00  INFO 17280 --- [restartedMain] com.task3.controller.traineeController   : traineeControler iniciado
+2024-02-27T12:03:17.965-05:00  INFO 17280 --- [restartedMain] c.t.m.s.training.iTrainingServiceImpl    : Iniciando el iTrainingServiceimpl
+2024-02-27T12:03:17.970-05:00  INFO 17280 --- [restartedMain] c.task3.controller.trainingController    : iniciando trainingController 
+2024-02-27T12:03:17.979-05:00  INFO 17280 --- [restartedMain] c.t.m.s.trainingType.trainingTypeImplem  : trainingTypeImplem iniciado
+2024-02-27T12:03:18.265-05:00  INFO 17280 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/actuator'
+2024-02-27T12:03:18.323-05:00  WARN 17280 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-27T12:03:18.901-05:00  INFO 17280 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-02-27T12:03:18.953-05:00  INFO 17280 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8090 (http) with context path ''
+2024-02-27T12:03:18.964-05:00  INFO 17280 --- [restartedMain] com.task3.Task3Application               : Started Task3Application in 4.552 seconds (process running for 5.071)
+2024-02-27T12:03:19.306-05:00  INFO 17280 --- [RMI TCP Connection(3)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-02-27T12:03:19.307-05:00  INFO 17280 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-02-27T12:03:19.308-05:00  INFO 17280 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-02-27T12:03:22.931-05:00  INFO 17280 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2024-02-27T12:03:22.944-05:00  INFO 17280 --- [RMI TCP Connection(2)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-27T12:03:22.947-05:00  WARN 17280 --- [RMI TCP Connection(2)-127.0.0.1] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de datos ya esta cerrada (para des-habilitar el cerrado automatico durante el shutdown de la VM, agregue ";DB_CLOSE_ON_EXIT=FALSE" a la URL de conexión)
 Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
-2024-02-23T11:43:41.003-05:00  INFO 18840 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-02-23T11:43:41.004-05:00  INFO 18840 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-02-23T11:43:41.017-05:00  INFO 18840 --- [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2024-02-23T11:43:41.031-05:00 ERROR 18840 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Web server failed to start. Port 8090 was already in use.
-
-Action:
-
-Identify and stop the process that's listening on port 8090 or configure this application to listen on another port.
-
-2024-02-23T11:44:18.098-05:00  INFO 3952 --- [restartedMain] com.task3.Task3Application               : Starting Task3Application using Java 19.0.2 with PID 3952 (C:\Users\USER\git\task3\task_3\target\classes started by USER in C:\Users\USER\git\task3\task_3)
-2024-02-23T11:44:18.099-05:00  INFO 3952 --- [restartedMain] com.task3.Task3Application               : The following 1 profile is active: "dev"
-2024-02-23T11:44:18.129-05:00  INFO 3952 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-02-23T11:44:18.130-05:00  INFO 3952 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-02-23T11:44:18.824-05:00  INFO 3952 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-02-23T11:44:18.869-05:00  INFO 3952 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 40 ms. Found 5 JPA repository interfaces.
-2024-02-23T11:44:19.365-05:00  INFO 3952 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8090 (http)
-2024-02-23T11:44:19.372-05:00  INFO 3952 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-02-23T11:44:19.372-05:00  INFO 3952 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
-2024-02-23T11:44:19.409-05:00  INFO 3952 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-02-23T11:44:19.409-05:00  INFO 3952 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1279 ms
-2024-02-23T11:44:19.534-05:00  INFO 3952 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-02-23T11:44:19.663-05:00  INFO 3952 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
-2024-02-23T11:44:19.664-05:00  INFO 3952 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-02-23T11:44:19.671-05:00  INFO 3952 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:testdb'
-2024-02-23T11:44:19.805-05:00  INFO 3952 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-02-23T11:44:19.843-05:00  INFO 3952 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
-2024-02-23T11:44:19.865-05:00  INFO 3952 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-02-23T11:44:20.016-05:00  INFO 3952 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-02-23T11:44:20.049-05:00  WARN 3952 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-02-23T11:44:20.497-05:00  INFO 3952 --- [restartedMain] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: com.task3.models.entity.User (class must be instantiated by Interceptor)
-2024-02-23T11:44:20.654-05:00  INFO 3952 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-02-23T11:44:20.708-05:00  INFO 3952 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-02-23T11:44:20.718-05:00  INFO 3952 --- [restartedMain] com.task3.Task3Application               : main ha sido inicializado
-2024-02-23T11:44:20.917-05:00  INFO 3952 --- [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2024-02-23T11:44:21.141-05:00  INFO 3952 --- [restartedMain] c.t.m.s.trainer.iTrainerServiceImpl      : Iniciando el iTrainerServiceImpl
-2024-02-23T11:44:21.157-05:00  INFO 3952 --- [restartedMain] com.task3.controller.itranerController   : iniciando itrainerController
-2024-02-23T11:44:21.179-05:00  INFO 3952 --- [restartedMain] com.task3.Task3Application               : iTraineServiceImpl ha sido inicializado
-2024-02-23T11:44:21.186-05:00  INFO 3952 --- [restartedMain] com.task3.controller.traineeController   : Controller iniciado
-2024-02-23T11:44:21.203-05:00  INFO 3952 --- [restartedMain] c.t.m.s.training.iTrainingServiceImpl    : Iniciando el iTrainingServiceimpl
-2024-02-23T11:44:21.208-05:00  INFO 3952 --- [restartedMain] com.task3.controller.traineeController   : iniciando Controlador TRAINING
-2024-02-23T11:44:21.500-05:00  INFO 3952 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/actuator'
-2024-02-23T11:44:21.550-05:00  WARN 3952 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-02-23T11:44:22.116-05:00  WARN 3952 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2024-02-23T11:44:22.158-05:00  WARN 3952 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
-2024-02-23T11:44:22.161-05:00  INFO 3952 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-02-23T11:44:22.165-05:00  WARN 3952 --- [restartedMain] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de datos ya esta cerrada (para des-habilitar el cerrado automatico durante el shutdown de la VM, agregue ";DB_CLOSE_ON_EXIT=FALSE" a la URL de conexión)
-Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
-2024-02-23T11:44:22.165-05:00  INFO 3952 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-02-23T11:44:22.167-05:00  INFO 3952 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-02-23T11:44:22.180-05:00  INFO 3952 --- [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2024-02-23T11:44:22.194-05:00 ERROR 3952 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Web server failed to start. Port 8090 was already in use.
-
-Action:
-
-Identify and stop the process that's listening on port 8090 or configure this application to listen on another port.
-
-2024-02-23T11:44:24.755-05:00  INFO 20120 --- [RMI TCP Connection(29)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2024-02-23T11:44:24.767-05:00  INFO 20120 --- [RMI TCP Connection(29)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-02-23T11:44:24.771-05:00  WARN 20120 --- [RMI TCP Connection(29)-127.0.0.1] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de datos ya esta cerrada (para des-habilitar el cerrado automatico durante el shutdown de la VM, agregue ";DB_CLOSE_ON_EXIT=FALSE" a la URL de conexión)
-Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
-2024-02-23T11:44:24.772-05:00  INFO 20120 --- [RMI TCP Connection(29)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-02-23T11:44:24.773-05:00  INFO 20120 --- [RMI TCP Connection(29)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-02-23T11:44:27.471-05:00  INFO 17092 --- [restartedMain] com.task3.Task3Application               : Starting Task3Application using Java 19.0.2 with PID 17092 (C:\Users\USER\git\task3\task_3\target\classes started by USER in C:\Users\USER\git\task3\task_3)
-2024-02-23T11:44:27.472-05:00  INFO 17092 --- [restartedMain] com.task3.Task3Application               : The following 1 profile is active: "dev"
-2024-02-23T11:44:27.502-05:00  INFO 17092 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-02-23T11:44:27.502-05:00  INFO 17092 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-02-23T11:44:28.168-05:00  INFO 17092 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-02-23T11:44:28.212-05:00  INFO 17092 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 39 ms. Found 5 JPA repository interfaces.
-2024-02-23T11:44:28.695-05:00  INFO 17092 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8090 (http)
-2024-02-23T11:44:28.701-05:00  INFO 17092 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-02-23T11:44:28.702-05:00  INFO 17092 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
-2024-02-23T11:44:28.737-05:00  INFO 17092 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-02-23T11:44:28.738-05:00  INFO 17092 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1234 ms
-2024-02-23T11:44:28.864-05:00  INFO 17092 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-02-23T11:44:29.002-05:00  INFO 17092 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
-2024-02-23T11:44:29.003-05:00  INFO 17092 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-02-23T11:44:29.010-05:00  INFO 17092 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:testdb'
-2024-02-23T11:44:29.148-05:00  INFO 17092 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-02-23T11:44:29.184-05:00  INFO 17092 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
-2024-02-23T11:44:29.206-05:00  INFO 17092 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-02-23T11:44:29.366-05:00  INFO 17092 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-02-23T11:44:29.402-05:00  WARN 17092 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-02-23T11:44:29.851-05:00  INFO 17092 --- [restartedMain] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: com.task3.models.entity.User (class must be instantiated by Interceptor)
-2024-02-23T11:44:30.008-05:00  INFO 17092 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-02-23T11:44:30.060-05:00  INFO 17092 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-02-23T11:44:30.070-05:00  INFO 17092 --- [restartedMain] com.task3.Task3Application               : main ha sido inicializado
-2024-02-23T11:44:30.269-05:00  INFO 17092 --- [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2024-02-23T11:44:30.492-05:00  INFO 17092 --- [restartedMain] c.t.m.s.trainer.iTrainerServiceImpl      : Iniciando el iTrainerServiceImpl
-2024-02-23T11:44:30.508-05:00  INFO 17092 --- [restartedMain] com.task3.controller.itranerController   : iniciando itrainerController
-2024-02-23T11:44:30.536-05:00  INFO 17092 --- [restartedMain] com.task3.Task3Application               : iTraineServiceImpl ha sido inicializado
-2024-02-23T11:44:30.542-05:00  INFO 17092 --- [restartedMain] com.task3.controller.traineeController   : Controller iniciado
-2024-02-23T11:44:30.563-05:00  INFO 17092 --- [restartedMain] c.t.m.s.training.iTrainingServiceImpl    : Iniciando el iTrainingServiceimpl
-2024-02-23T11:44:30.568-05:00  INFO 17092 --- [restartedMain] com.task3.controller.traineeController   : iniciando Controlador TRAINING
-2024-02-23T11:44:30.853-05:00  INFO 17092 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/actuator'
-2024-02-23T11:44:30.903-05:00  WARN 17092 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-02-23T11:44:31.471-05:00  INFO 17092 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2024-02-23T11:44:31.524-05:00  INFO 17092 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8090 (http) with context path ''
-2024-02-23T11:44:31.534-05:00  INFO 17092 --- [restartedMain] com.task3.Task3Application               : Started Task3Application in 4.347 seconds (process running for 4.809)
-2024-02-23T11:44:32.470-05:00  INFO 17092 --- [RMI TCP Connection(3)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-02-23T11:44:32.470-05:00  INFO 17092 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-02-23T11:44:32.471-05:00  INFO 17092 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2024-02-23T11:45:08.899-05:00  INFO 17092 --- [http-nio-8090-exec-4] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 406 ms
-2024-02-23T11:50:09.998-05:00  INFO 17092 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (1 addition, 0 deletions, 1 modification)
-2024-02-23T11:50:10.011-05:00  INFO 17092 --- [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-02-23T11:50:10.014-05:00  WARN 17092 --- [Thread-5] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de datos ya esta cerrada (para des-habilitar el cerrado automatico durante el shutdown de la VM, agregue ";DB_CLOSE_ON_EXIT=FALSE" a la URL de conexión)
-Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
-2024-02-23T11:50:10.014-05:00  INFO 17092 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-02-23T11:50:10.015-05:00  INFO 17092 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-02-23T11:50:10.102-05:00  INFO 17092 --- [restartedMain] com.task3.Task3Application               : Starting Task3Application using Java 19.0.2 with PID 17092 (C:\Users\USER\git\task3\task_3\target\classes started by USER in C:\Users\USER\git\task3\task_3)
-2024-02-23T11:50:10.102-05:00  INFO 17092 --- [restartedMain] com.task3.Task3Application               : The following 1 profile is active: "dev"
-2024-02-23T11:50:10.351-05:00  INFO 17092 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-02-23T11:50:10.366-05:00  INFO 17092 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 5 JPA repository interfaces.
-2024-02-23T11:50:10.498-05:00  INFO 17092 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8090 (http)
-2024-02-23T11:50:10.498-05:00  INFO 17092 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-02-23T11:50:10.499-05:00  INFO 17092 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
-2024-02-23T11:50:10.513-05:00  INFO 17092 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-02-23T11:50:10.513-05:00  INFO 17092 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 409 ms
-2024-02-23T11:50:10.571-05:00  INFO 17092 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2024-02-23T11:50:10.572-05:00  INFO 17092 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:testdb user=SA
-2024-02-23T11:50:10.572-05:00  INFO 17092 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2024-02-23T11:50:10.573-05:00  INFO 17092 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:testdb'
-2024-02-23T11:50:10.621-05:00  INFO 17092 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-02-23T11:50:10.624-05:00  INFO 17092 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-02-23T11:50:10.626-05:00  INFO 17092 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-02-23T11:50:10.628-05:00  WARN 17092 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-02-23T11:50:10.661-05:00  INFO 17092 --- [restartedMain] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: com.task3.models.entity.User (class must be instantiated by Interceptor)
-2024-02-23T11:50:10.692-05:00  INFO 17092 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-02-23T11:50:10.705-05:00  INFO 17092 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-02-23T11:50:10.712-05:00  INFO 17092 --- [restartedMain] com.task3.Task3Application               : main ha sido inicializado
-2024-02-23T11:50:10.800-05:00  INFO 17092 --- [restartedMain] c.t.m.s.trainer.iTrainerServiceImpl      : Iniciando el iTrainerServiceImpl
-2024-02-23T11:50:10.806-05:00  INFO 17092 --- [restartedMain] com.task3.controller.itranerController   : iniciando itrainerController
-2024-02-23T11:50:10.823-05:00  INFO 17092 --- [restartedMain] com.task3.Task3Application               : iTraineServiceImpl ha sido inicializado
-2024-02-23T11:50:10.827-05:00  INFO 17092 --- [restartedMain] com.task3.controller.traineeController   : Controller iniciado
-2024-02-23T11:50:10.852-05:00  INFO 17092 --- [restartedMain] c.t.m.s.training.iTrainingServiceImpl    : Iniciando el iTrainingServiceimpl
-2024-02-23T11:50:10.856-05:00  INFO 17092 --- [restartedMain] com.task3.controller.traineeController   : iniciando Controlador TRAINING
-2024-02-23T11:50:11.043-05:00  INFO 17092 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/actuator'
-2024-02-23T11:50:11.072-05:00  WARN 17092 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-02-23T11:50:11.470-05:00  INFO 17092 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2024-02-23T11:50:11.494-05:00  INFO 17092 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8090 (http) with context path ''
-2024-02-23T11:50:11.502-05:00  INFO 17092 --- [restartedMain] com.task3.Task3Application               : Started Task3Application in 1.423 seconds (process running for 344.777)
-2024-02-23T11:50:11.505-05:00  INFO 17092 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2024-02-23T11:50:12.262-05:00  INFO 17092 --- [RMI TCP Connection(11)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2024-02-23T11:50:12.270-05:00  INFO 17092 --- [RMI TCP Connection(11)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-02-23T11:50:12.271-05:00  WARN 17092 --- [RMI TCP Connection(11)-127.0.0.1] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de datos ya esta cerrada (para des-habilitar el cerrado automatico durante el shutdown de la VM, agregue ";DB_CLOSE_ON_EXIT=FALSE" a la URL de conexión)
-Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
-2024-02-23T11:50:12.271-05:00  INFO 17092 --- [RMI TCP Connection(11)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
-2024-02-23T11:50:12.271-05:00  INFO 17092 --- [RMI TCP Connection(11)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
-2024-02-23T11:50:13.937-05:00  INFO 22368 --- [restartedMain] com.task3.Task3Application               : Starting Task3Application using Java 19.0.2 with PID 22368 (C:\Users\USER\git\task3\task_3\target\classes started by USER in C:\Users\USER\git\task3\task_3)
-2024-02-23T11:50:13.939-05:00  INFO 22368 --- [restartedMain] com.task3.Task3Application               : The following 1 profile is active: "dev"
-2024-02-23T11:50:13.968-05:00  INFO 22368 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-02-23T11:50:13.968-05:00  INFO 22368 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-02-23T11:50:14.640-05:00  INFO 22368 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-02-23T11:50:14.684-05:00  INFO 22368 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 39 ms. Found 5 JPA repository interfaces.
-2024-02-23T11:50:15.171-05:00  INFO 22368 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8090 (http)
-2024-02-23T11:50:15.178-05:00  INFO 22368 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-02-23T11:50:15.178-05:00  INFO 22368 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
-2024-02-23T11:50:15.215-05:00  INFO 22368 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-02-23T11:50:15.215-05:00  INFO 22368 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1246 ms
-2024-02-23T11:50:15.326-05:00  INFO 22368 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-02-23T11:50:15.458-05:00  INFO 22368 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
-2024-02-23T11:50:15.459-05:00  INFO 22368 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-02-23T11:50:15.466-05:00  INFO 22368 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:testdb'
-2024-02-23T11:50:15.602-05:00  INFO 22368 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-02-23T11:50:15.638-05:00  INFO 22368 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
-2024-02-23T11:50:15.661-05:00  INFO 22368 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-02-23T11:50:15.807-05:00  INFO 22368 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-02-23T11:50:15.840-05:00  WARN 22368 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-02-23T11:50:16.291-05:00  INFO 22368 --- [restartedMain] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: com.task3.models.entity.User (class must be instantiated by Interceptor)
-2024-02-23T11:50:16.442-05:00  INFO 22368 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-02-23T11:50:16.500-05:00  INFO 22368 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-02-23T11:50:16.510-05:00  INFO 22368 --- [restartedMain] com.task3.Task3Application               : main ha sido inicializado
-2024-02-23T11:50:16.704-05:00  INFO 22368 --- [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2024-02-23T11:50:16.921-05:00  INFO 22368 --- [restartedMain] c.t.m.s.trainer.iTrainerServiceImpl      : Iniciando el iTrainerServiceImpl
-2024-02-23T11:50:16.936-05:00  INFO 22368 --- [restartedMain] com.task3.controller.itranerController   : iniciando itrainerController
-2024-02-23T11:50:16.959-05:00  INFO 22368 --- [restartedMain] com.task3.Task3Application               : iTraineServiceImpl ha sido inicializado
-2024-02-23T11:50:16.965-05:00  INFO 22368 --- [restartedMain] com.task3.controller.traineeController   : Controller iniciado
-2024-02-23T11:50:16.982-05:00  INFO 22368 --- [restartedMain] c.t.m.s.training.iTrainingServiceImpl    : Iniciando el iTrainingServiceimpl
-2024-02-23T11:50:16.987-05:00  INFO 22368 --- [restartedMain] com.task3.controller.traineeController   : iniciando Controlador TRAINING
-2024-02-23T11:50:17.284-05:00  INFO 22368 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/actuator'
-2024-02-23T11:50:17.334-05:00  WARN 22368 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-02-23T11:50:17.900-05:00  INFO 22368 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2024-02-23T11:50:17.953-05:00  INFO 22368 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8090 (http) with context path ''
-2024-02-23T11:50:17.963-05:00  INFO 22368 --- [restartedMain] com.task3.Task3Application               : Started Task3Application in 4.305 seconds (process running for 4.742)
-2024-02-23T11:50:19.033-05:00  INFO 22368 --- [RMI TCP Connection(3)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-02-23T11:50:19.033-05:00  INFO 22368 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-02-23T11:50:19.034-05:00  INFO 22368 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2024-02-23T11:51:09.232-05:00  INFO 22368 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-2024-02-23T11:51:09.247-05:00  INFO 22368 --- [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-02-23T11:51:09.252-05:00  WARN 22368 --- [Thread-5] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de datos ya esta cerrada (para des-habilitar el cerrado automatico durante el shutdown de la VM, agregue ";DB_CLOSE_ON_EXIT=FALSE" a la URL de conexión)
-Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
-2024-02-23T11:51:09.253-05:00  INFO 22368 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-02-23T11:51:09.254-05:00  INFO 22368 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-02-23T11:51:09.366-05:00  INFO 22368 --- [restartedMain] com.task3.Task3Application               : Starting Task3Application using Java 19.0.2 with PID 22368 (C:\Users\USER\git\task3\task_3\target\classes started by USER in C:\Users\USER\git\task3\task_3)
-2024-02-23T11:51:09.366-05:00  INFO 22368 --- [restartedMain] com.task3.Task3Application               : The following 1 profile is active: "dev"
-2024-02-23T11:51:09.647-05:00  INFO 22368 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-02-23T11:51:09.663-05:00  INFO 22368 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 5 JPA repository interfaces.
-2024-02-23T11:51:09.792-05:00  INFO 22368 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8090 (http)
-2024-02-23T11:51:09.792-05:00  INFO 22368 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-02-23T11:51:09.792-05:00  INFO 22368 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
-2024-02-23T11:51:09.808-05:00  INFO 22368 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-02-23T11:51:09.808-05:00  INFO 22368 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 440 ms
-2024-02-23T11:51:09.866-05:00  INFO 22368 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2024-02-23T11:51:09.868-05:00  INFO 22368 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:testdb user=SA
-2024-02-23T11:51:09.868-05:00  INFO 22368 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2024-02-23T11:51:09.868-05:00  INFO 22368 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:testdb'
-2024-02-23T11:51:09.918-05:00  INFO 22368 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-02-23T11:51:09.920-05:00  INFO 22368 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-02-23T11:51:09.923-05:00  INFO 22368 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-02-23T11:51:09.923-05:00  WARN 22368 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-02-23T11:51:09.957-05:00  INFO 22368 --- [restartedMain] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: com.task3.models.entity.User (class must be instantiated by Interceptor)
-2024-02-23T11:51:09.991-05:00  INFO 22368 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-02-23T11:51:10.002-05:00  INFO 22368 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-02-23T11:51:10.009-05:00  INFO 22368 --- [restartedMain] com.task3.Task3Application               : main ha sido inicializado
-2024-02-23T11:51:10.093-05:00  INFO 22368 --- [restartedMain] c.t.m.s.trainer.iTrainerServiceImpl      : Iniciando el iTrainerServiceImpl
-2024-02-23T11:51:10.098-05:00  INFO 22368 --- [restartedMain] com.task3.controller.itranerController   : iniciando itrainerController
-2024-02-23T11:51:10.112-05:00  INFO 22368 --- [restartedMain] com.task3.Task3Application               : iTraineServiceImpl ha sido inicializado
-2024-02-23T11:51:10.117-05:00  INFO 22368 --- [restartedMain] com.task3.controller.traineeController   : Controller iniciado
-2024-02-23T11:51:10.134-05:00  INFO 22368 --- [restartedMain] c.t.m.s.training.iTrainingServiceImpl    : Iniciando el iTrainingServiceimpl
-2024-02-23T11:51:10.137-05:00  INFO 22368 --- [restartedMain] com.task3.controller.traineeController   : iniciando Controlador TRAINING
-2024-02-23T11:51:10.296-05:00  INFO 22368 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/actuator'
-2024-02-23T11:51:10.321-05:00  WARN 22368 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-02-23T11:51:11.754-05:00  INFO 5564 --- [restartedMain] com.task3.Task3Application               : Starting Task3Application using Java 19.0.2 with PID 5564 (C:\Users\USER\git\task3\task_3\target\classes started by USER in C:\Users\USER\git\task3\task_3)
-2024-02-23T11:51:11.756-05:00  INFO 5564 --- [restartedMain] com.task3.Task3Application               : The following 1 profile is active: "dev"
-2024-02-23T11:51:11.785-05:00  INFO 5564 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-02-23T11:51:11.786-05:00  INFO 5564 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-02-23T11:51:12.464-05:00  INFO 5564 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-02-23T11:51:12.509-05:00  INFO 5564 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 41 ms. Found 5 JPA repository interfaces.
-2024-02-23T11:51:12.997-05:00  INFO 5564 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8090 (http)
-2024-02-23T11:51:13.003-05:00  INFO 5564 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-02-23T11:51:13.003-05:00  INFO 5564 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
-2024-02-23T11:51:13.045-05:00  INFO 5564 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-02-23T11:51:13.046-05:00  INFO 5564 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1260 ms
-2024-02-23T11:51:13.161-05:00  INFO 5564 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-02-23T11:51:13.293-05:00  INFO 5564 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
-2024-02-23T11:51:13.294-05:00  INFO 5564 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-02-23T11:51:13.301-05:00  INFO 5564 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:testdb'
-2024-02-23T11:51:13.432-05:00  INFO 5564 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-02-23T11:51:13.467-05:00  INFO 5564 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
-2024-02-23T11:51:13.489-05:00  INFO 5564 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-02-23T11:51:13.636-05:00  INFO 5564 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-02-23T11:51:13.665-05:00  WARN 5564 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-02-23T11:51:14.110-05:00  INFO 5564 --- [restartedMain] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: com.task3.models.entity.User (class must be instantiated by Interceptor)
-2024-02-23T11:51:14.268-05:00  INFO 5564 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-02-23T11:51:14.321-05:00  INFO 5564 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-02-23T11:51:14.330-05:00  INFO 5564 --- [restartedMain] com.task3.Task3Application               : main ha sido inicializado
-2024-02-23T11:51:14.523-05:00  INFO 5564 --- [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2024-02-23T11:51:14.741-05:00  INFO 5564 --- [restartedMain] c.t.m.s.trainer.iTrainerServiceImpl      : Iniciando el iTrainerServiceImpl
-2024-02-23T11:51:14.757-05:00  INFO 5564 --- [restartedMain] com.task3.controller.itranerController   : iniciando itrainerController
-2024-02-23T11:51:14.779-05:00  INFO 5564 --- [restartedMain] com.task3.Task3Application               : iTraineServiceImpl ha sido inicializado
-2024-02-23T11:51:14.785-05:00  INFO 5564 --- [restartedMain] com.task3.controller.traineeController   : Controller iniciado
-2024-02-23T11:51:14.802-05:00  INFO 5564 --- [restartedMain] c.t.m.s.training.iTrainingServiceImpl    : Iniciando el iTrainingServiceimpl
-2024-02-23T11:51:14.808-05:00  INFO 5564 --- [restartedMain] com.task3.controller.traineeController   : iniciando Controlador TRAINING
-2024-02-23T11:51:15.094-05:00  INFO 5564 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/actuator'
-2024-02-23T11:51:15.143-05:00  WARN 5564 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-02-23T11:51:15.704-05:00  INFO 5564 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2024-02-23T11:51:15.754-05:00  INFO 5564 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8090 (http) with context path ''
-2024-02-23T11:51:15.764-05:00  INFO 5564 --- [restartedMain] com.task3.Task3Application               : Started Task3Application in 4.293 seconds (process running for 4.755)
-2024-02-23T11:51:16.744-05:00  INFO 5564 --- [RMI TCP Connection(3)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-02-23T11:51:16.744-05:00  INFO 5564 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-02-23T11:51:16.745-05:00  INFO 5564 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2024-02-23T11:51:20.219-05:00  INFO 5564 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2024-02-23T11:51:20.232-05:00  INFO 5564 --- [RMI TCP Connection(2)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-02-23T11:51:20.237-05:00  WARN 5564 --- [RMI TCP Connection(2)-127.0.0.1] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de datos ya esta cerrada (para des-habilitar el cerrado automatico durante el shutdown de la VM, agregue ";DB_CLOSE_ON_EXIT=FALSE" a la URL de conexión)
-Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
-2024-02-23T11:51:20.237-05:00  INFO 5564 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-02-23T11:51:20.239-05:00  INFO 5564 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-02-23T11:51:22.889-05:00  INFO 21112 --- [restartedMain] com.task3.Task3Application               : Starting Task3Application using Java 19.0.2 with PID 21112 (C:\Users\USER\git\task3\task_3\target\classes started by USER in C:\Users\USER\git\task3\task_3)
-2024-02-23T11:51:22.891-05:00  INFO 21112 --- [restartedMain] com.task3.Task3Application               : The following 1 profile is active: "dev"
-2024-02-23T11:51:22.920-05:00  INFO 21112 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-02-23T11:51:22.921-05:00  INFO 21112 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-02-23T11:51:23.620-05:00  INFO 21112 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-02-23T11:51:23.666-05:00  INFO 21112 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 41 ms. Found 5 JPA repository interfaces.
-2024-02-23T11:51:24.150-05:00  INFO 21112 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8090 (http)
-2024-02-23T11:51:24.156-05:00  INFO 21112 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-02-23T11:51:24.157-05:00  INFO 21112 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
-2024-02-23T11:51:24.193-05:00  INFO 21112 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-02-23T11:51:24.193-05:00  INFO 21112 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1272 ms
-2024-02-23T11:51:24.314-05:00  INFO 21112 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-02-23T11:51:24.449-05:00  INFO 21112 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
-2024-02-23T11:51:24.450-05:00  INFO 21112 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-02-23T11:51:24.457-05:00  INFO 21112 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:testdb'
-2024-02-23T11:51:24.591-05:00  INFO 21112 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-02-23T11:51:24.627-05:00  INFO 21112 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
-2024-02-23T11:51:24.650-05:00  INFO 21112 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-02-23T11:51:24.796-05:00  INFO 21112 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-02-23T11:51:24.830-05:00  WARN 21112 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-02-23T11:51:25.275-05:00  INFO 21112 --- [restartedMain] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: com.task3.models.entity.User (class must be instantiated by Interceptor)
-2024-02-23T11:51:25.433-05:00  INFO 21112 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-02-23T11:51:25.491-05:00  INFO 21112 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-02-23T11:51:25.501-05:00  INFO 21112 --- [restartedMain] com.task3.Task3Application               : main ha sido inicializado
-2024-02-23T11:51:25.701-05:00  INFO 21112 --- [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2024-02-23T11:51:25.917-05:00  INFO 21112 --- [restartedMain] c.t.m.s.trainer.iTrainerServiceImpl      : Iniciando el iTrainerServiceImpl
-2024-02-23T11:51:25.934-05:00  INFO 21112 --- [restartedMain] com.task3.controller.itranerController   : iniciando itrainerController
-2024-02-23T11:51:25.955-05:00  INFO 21112 --- [restartedMain] com.task3.Task3Application               : iTraineServiceImpl ha sido inicializado
-2024-02-23T11:51:25.962-05:00  INFO 21112 --- [restartedMain] com.task3.controller.traineeController   : Controller iniciado
-2024-02-23T11:51:25.985-05:00  INFO 21112 --- [restartedMain] c.t.m.s.training.iTrainingServiceImpl    : Iniciando el iTrainingServiceimpl
-2024-02-23T11:51:25.991-05:00  INFO 21112 --- [restartedMain] com.task3.controller.traineeController   : iniciando Controlador TRAINING
-2024-02-23T11:51:26.284-05:00  INFO 21112 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/actuator'
-2024-02-23T11:51:26.334-05:00  WARN 21112 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-02-23T11:51:26.907-05:00  INFO 21112 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2024-02-23T11:51:26.961-05:00  INFO 21112 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8090 (http) with context path ''
-2024-02-23T11:51:26.972-05:00  INFO 21112 --- [restartedMain] com.task3.Task3Application               : Started Task3Application in 4.363 seconds (process running for 4.799)
-2024-02-23T11:51:27.957-05:00  INFO 21112 --- [RMI TCP Connection(3)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-02-23T11:51:27.957-05:00  INFO 21112 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-02-23T11:51:27.958-05:00  INFO 21112 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2024-02-23T12:02:53.634-05:00  INFO 21112 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
-2024-02-23T12:02:53.648-05:00  INFO 21112 --- [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-02-23T12:02:53.652-05:00  WARN 21112 --- [Thread-5] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de datos ya esta cerrada (para des-habilitar el cerrado automatico durante el shutdown de la VM, agregue ";DB_CLOSE_ON_EXIT=FALSE" a la URL de conexión)
-Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
-2024-02-23T12:02:53.653-05:00  INFO 21112 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-02-23T12:02:53.654-05:00  INFO 21112 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-02-23T12:02:53.742-05:00  INFO 21112 --- [restartedMain] com.task3.Task3Application               : Starting Task3Application using Java 19.0.2 with PID 21112 (C:\Users\USER\git\task3\task_3\target\classes started by USER in C:\Users\USER\git\task3\task_3)
-2024-02-23T12:02:53.742-05:00  INFO 21112 --- [restartedMain] com.task3.Task3Application               : The following 1 profile is active: "dev"
-2024-02-23T12:02:54.000-05:00  INFO 21112 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-02-23T12:02:54.016-05:00  INFO 21112 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 5 JPA repository interfaces.
-2024-02-23T12:02:54.141-05:00  INFO 21112 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8090 (http)
-2024-02-23T12:02:54.142-05:00  INFO 21112 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-02-23T12:02:54.142-05:00  INFO 21112 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
-2024-02-23T12:02:54.156-05:00  INFO 21112 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-02-23T12:02:54.156-05:00  INFO 21112 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 412 ms
-2024-02-23T12:02:54.215-05:00  INFO 21112 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2024-02-23T12:02:54.216-05:00  INFO 21112 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:testdb user=SA
-2024-02-23T12:02:54.217-05:00  INFO 21112 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2024-02-23T12:02:54.217-05:00  INFO 21112 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:testdb'
-2024-02-23T12:02:54.267-05:00  INFO 21112 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-02-23T12:02:54.269-05:00  INFO 21112 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-02-23T12:02:54.272-05:00  INFO 21112 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-02-23T12:02:54.273-05:00  WARN 21112 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-02-23T12:02:54.306-05:00  INFO 21112 --- [restartedMain] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: com.task3.models.entity.User (class must be instantiated by Interceptor)
-2024-02-23T12:02:54.341-05:00  INFO 21112 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-02-23T12:02:54.353-05:00  INFO 21112 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-02-23T12:02:54.361-05:00  INFO 21112 --- [restartedMain] com.task3.Task3Application               : main ha sido inicializado
-2024-02-23T12:02:54.449-05:00  INFO 21112 --- [restartedMain] c.t.m.s.trainer.iTrainerServiceImpl      : Iniciando el iTrainerServiceImpl
-2024-02-23T12:02:54.453-05:00  INFO 21112 --- [restartedMain] com.task3.controller.itranerController   : iniciando itrainerController
-2024-02-23T12:02:54.468-05:00  INFO 21112 --- [restartedMain] com.task3.Task3Application               : iTraineServiceImpl ha sido inicializado
-2024-02-23T12:02:54.472-05:00  INFO 21112 --- [restartedMain] com.task3.controller.traineeController   : traineeControler iniciado
-2024-02-23T12:02:54.489-05:00  INFO 21112 --- [restartedMain] c.t.m.s.training.iTrainingServiceImpl    : Iniciando el iTrainingServiceimpl
-2024-02-23T12:02:54.492-05:00  INFO 21112 --- [restartedMain] com.task3.controller.traineeController   : iniciando Controlador TRAINING
-2024-02-23T12:02:54.681-05:00  INFO 21112 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/actuator'
-2024-02-23T12:02:54.712-05:00  WARN 21112 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-02-23T12:02:55.079-05:00  INFO 21112 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2024-02-23T12:02:55.094-05:00  INFO 21112 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8090 (http) with context path ''
-2024-02-23T12:02:55.101-05:00  INFO 21112 --- [restartedMain] com.task3.Task3Application               : Started Task3Application in 1.384 seconds (process running for 692.928)
-2024-02-23T12:02:55.103-05:00  INFO 21112 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2024-02-23T12:46:02.274-05:00  INFO 21112 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 17 class path changes (0 additions, 0 deletions, 17 modifications)
-2024-02-23T12:46:02.323-05:00  INFO 21112 --- [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-02-23T12:46:02.329-05:00  WARN 21112 --- [Thread-7] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de datos ya esta cerrada (para des-habilitar el cerrado automatico durante el shutdown de la VM, agregue ";DB_CLOSE_ON_EXIT=FALSE" a la URL de conexión)
-Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
-2024-02-23T12:46:02.330-05:00  INFO 21112 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
-2024-02-23T12:46:02.331-05:00  INFO 21112 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
-2024-02-23T12:46:02.481-05:00  INFO 21112 --- [restartedMain] com.task3.Task3Application               : Starting Task3Application using Java 19.0.2 with PID 21112 (C:\Users\USER\git\task3\task_3\target\classes started by USER in C:\Users\USER\git\task3\task_3)
-2024-02-23T12:46:02.482-05:00  INFO 21112 --- [restartedMain] com.task3.Task3Application               : The following 1 profile is active: "dev"
-2024-02-23T12:46:02.754-05:00  INFO 21112 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-02-23T12:46:02.772-05:00  INFO 21112 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 5 JPA repository interfaces.
-2024-02-23T12:46:02.922-05:00  INFO 21112 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8090 (http)
-2024-02-23T12:46:02.922-05:00  INFO 21112 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-02-23T12:46:02.922-05:00  INFO 21112 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
-2024-02-23T12:46:02.939-05:00  INFO 21112 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-02-23T12:46:02.939-05:00  INFO 21112 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 455 ms
-2024-02-23T12:46:03.001-05:00  INFO 21112 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
-2024-02-23T12:46:03.003-05:00  INFO 21112 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection conn30: url=jdbc:h2:mem:testdb user=SA
-2024-02-23T12:46:03.003-05:00  INFO 21112 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
-2024-02-23T12:46:03.003-05:00  INFO 21112 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:testdb'
-2024-02-23T12:46:03.060-05:00  INFO 21112 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-02-23T12:46:03.063-05:00  INFO 21112 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-02-23T12:46:03.066-05:00  INFO 21112 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-02-23T12:46:03.068-05:00  WARN 21112 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-02-23T12:46:03.098-05:00  INFO 21112 --- [restartedMain] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: com.task3.models.entity.User (class must be instantiated by Interceptor)
-2024-02-23T12:46:03.129-05:00  INFO 21112 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-02-23T12:46:03.141-05:00  INFO 21112 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-02-23T12:46:03.149-05:00  INFO 21112 --- [restartedMain] com.task3.Task3Application               : main ha sido inicializado
-2024-02-23T12:46:03.245-05:00  INFO 21112 --- [restartedMain] c.t.m.s.trainer.iTrainerServiceImpl      : Iniciando el iTrainerServiceImpl
-2024-02-23T12:46:03.249-05:00  INFO 21112 --- [restartedMain] com.task3.controller.itranerController   : iniciando itrainerController
-2024-02-23T12:46:03.266-05:00  INFO 21112 --- [restartedMain] c.t.m.s.trainee.iTraineServiceImpl       : iTraineServiceImpl ha sido inicializado
-2024-02-23T12:46:03.271-05:00  INFO 21112 --- [restartedMain] com.task3.controller.traineeController   : traineeControler iniciado
-2024-02-23T12:46:03.287-05:00  INFO 21112 --- [restartedMain] c.t.m.s.training.iTrainingServiceImpl    : Iniciando el iTrainingServiceimpl
-2024-02-23T12:46:03.291-05:00  INFO 21112 --- [restartedMain] c.task3.controller.trainingController    : iniciando trainingController 
-2024-02-23T12:46:03.299-05:00  INFO 21112 --- [restartedMain] c.t.m.s.trainingType.trainingTypeImplem  : trainingTypeImplem iniciado
-2024-02-23T12:46:03.495-05:00  INFO 21112 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/actuator'
-2024-02-23T12:46:03.529-05:00  WARN 21112 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-02-23T12:46:03.922-05:00  INFO 21112 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2024-02-23T12:46:03.938-05:00  INFO 21112 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8090 (http) with context path ''
-2024-02-23T12:46:03.945-05:00  INFO 21112 --- [restartedMain] com.task3.Task3Application               : Started Task3Application in 1.514 seconds (process running for 3281.772)
-2024-02-23T12:46:03.947-05:00  INFO 21112 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2024-02-23T12:47:27.858-05:00  INFO 21112 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-2024-02-23T12:47:27.865-05:00  INFO 21112 --- [Thread-12] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-02-23T12:47:27.866-05:00  WARN 21112 --- [Thread-12] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de datos ya esta cerrada (para des-habilitar el cerrado automatico durante el shutdown de la VM, agregue ";DB_CLOSE_ON_EXIT=FALSE" a la URL de conexión)
-Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
-2024-02-23T12:47:27.866-05:00  INFO 21112 --- [Thread-12] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
-2024-02-23T12:47:27.867-05:00  INFO 21112 --- [Thread-12] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
-2024-02-23T12:47:27.945-05:00  INFO 21112 --- [restartedMain] com.task3.Task3Application               : Starting Task3Application using Java 19.0.2 with PID 21112 (C:\Users\USER\git\task3\task_3\target\classes started by USER in C:\Users\USER\git\task3\task_3)
-2024-02-23T12:47:27.945-05:00  INFO 21112 --- [restartedMain] com.task3.Task3Application               : The following 1 profile is active: "dev"
-2024-02-23T12:47:28.165-05:00  INFO 21112 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-02-23T12:47:28.180-05:00  INFO 21112 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 5 JPA repository interfaces.
-2024-02-23T12:47:28.316-05:00  INFO 21112 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8090 (http)
-2024-02-23T12:47:28.317-05:00  INFO 21112 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-02-23T12:47:28.317-05:00  INFO 21112 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
-2024-02-23T12:47:28.338-05:00  INFO 21112 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-02-23T12:47:28.338-05:00  INFO 21112 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 392 ms
-2024-02-23T12:47:28.397-05:00  INFO 21112 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
-2024-02-23T12:47:28.398-05:00  INFO 21112 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection conn40: url=jdbc:h2:mem:testdb user=SA
-2024-02-23T12:47:28.399-05:00  INFO 21112 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
-2024-02-23T12:47:28.399-05:00  INFO 21112 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:testdb'
-2024-02-23T12:47:28.444-05:00  INFO 21112 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-02-23T12:47:28.446-05:00  INFO 21112 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-02-23T12:47:28.449-05:00  INFO 21112 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-02-23T12:47:28.450-05:00  WARN 21112 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-02-23T12:47:28.474-05:00  INFO 21112 --- [restartedMain] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: com.task3.models.entity.User (class must be instantiated by Interceptor)
-2024-02-23T12:47:28.498-05:00  INFO 21112 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-02-23T12:47:28.507-05:00  INFO 21112 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-02-23T12:47:28.514-05:00  INFO 21112 --- [restartedMain] com.task3.Task3Application               : main ha sido inicializado
-2024-02-23T12:47:28.600-05:00  INFO 21112 --- [restartedMain] c.t.m.s.trainer.iTrainerServiceImpl      : Iniciando el iTrainerServiceImpl
-2024-02-23T12:47:28.604-05:00  INFO 21112 --- [restartedMain] com.task3.controller.itranerController   : iniciando itrainerController
-2024-02-23T12:47:28.619-05:00  INFO 21112 --- [restartedMain] c.t.m.s.trainee.iTraineServiceImpl       : iTraineServiceImpl ha sido inicializado
-2024-02-23T12:47:28.622-05:00  INFO 21112 --- [restartedMain] com.task3.controller.traineeController   : traineeControler iniciado
-2024-02-23T12:47:28.637-05:00  INFO 21112 --- [restartedMain] c.t.m.s.training.iTrainingServiceImpl    : Iniciando el iTrainingServiceimpl
-2024-02-23T12:47:28.640-05:00  INFO 21112 --- [restartedMain] c.task3.controller.trainingController    : iniciando trainingController 
-2024-02-23T12:47:28.648-05:00  INFO 21112 --- [restartedMain] c.t.m.s.trainingType.trainingTypeImplem  : trainingTypeImplem iniciado
-2024-02-23T12:47:28.802-05:00  INFO 21112 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/actuator'
-2024-02-23T12:47:28.827-05:00  WARN 21112 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-02-23T12:47:29.161-05:00  INFO 21112 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2024-02-23T12:47:29.180-05:00  INFO 21112 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8090 (http) with context path ''
-2024-02-23T12:47:29.186-05:00  INFO 21112 --- [restartedMain] com.task3.Task3Application               : Started Task3Application in 1.259 seconds (process running for 3367.013)
-2024-02-23T12:47:29.188-05:00  INFO 21112 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2024-02-23T12:47:30.461-05:00  INFO 21112 --- [RMI TCP Connection(62)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2024-02-23T12:47:30.468-05:00  INFO 21112 --- [RMI TCP Connection(62)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-02-23T12:47:30.469-05:00  WARN 21112 --- [RMI TCP Connection(62)-127.0.0.1] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de datos ya esta cerrada (para des-habilitar el cerrado automatico durante el shutdown de la VM, agregue ";DB_CLOSE_ON_EXIT=FALSE" a la URL de conexión)
-Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
-2024-02-23T12:47:30.469-05:00  INFO 21112 --- [RMI TCP Connection(62)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
-2024-02-23T12:47:30.469-05:00  INFO 21112 --- [RMI TCP Connection(62)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
-2024-02-23T12:47:39.615-05:00  INFO 12828 --- [main] com.task3.Service.traineeServiceTest     : Starting traineeServiceTest using Java 19.0.2 with PID 12828 (started by USER in C:\Users\USER\git\task3\task_3)
-2024-02-23T12:47:39.617-05:00  INFO 12828 --- [main] com.task3.Service.traineeServiceTest     : The following 1 profile is active: "dev"
-2024-02-23T12:47:40.789-05:00  INFO 12828 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-02-23T12:47:40.852-05:00  INFO 12828 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 53 ms. Found 5 JPA repository interfaces.
-2024-02-23T12:47:41.578-05:00  INFO 12828 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-02-23T12:47:41.659-05:00  INFO 12828 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
-2024-02-23T12:47:41.702-05:00  INFO 12828 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-02-23T12:47:41.861-05:00  INFO 12828 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-02-23T12:47:41.893-05:00  INFO 12828 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-02-23T12:47:42.202-05:00  INFO 12828 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
-2024-02-23T12:47:42.204-05:00  INFO 12828 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-02-23T12:47:42.238-05:00  WARN 12828 --- [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-02-23T12:47:42.930-05:00  INFO 12828 --- [main] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: com.task3.models.entity.User (class must be instantiated by Interceptor)
-2024-02-23T12:47:43.203-05:00  INFO 12828 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-02-23T12:47:43.311-05:00  INFO 12828 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-02-23T12:47:43.328-05:00  INFO 12828 --- [main] com.task3.Task3Application               : main ha sido inicializado
-2024-02-23T12:47:43.692-05:00  INFO 12828 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2024-02-23T12:47:44.154-05:00  INFO 12828 --- [main] c.t.m.s.trainer.iTrainerServiceImpl      : Iniciando el iTrainerServiceImpl
-2024-02-23T12:47:44.183-05:00  INFO 12828 --- [main] com.task3.controller.itranerController   : iniciando itrainerController
-2024-02-23T12:47:44.216-05:00  INFO 12828 --- [main] c.t.m.s.trainee.iTraineServiceImpl       : iTraineServiceImpl ha sido inicializado
-2024-02-23T12:47:44.229-05:00  INFO 12828 --- [main] com.task3.controller.traineeController   : traineeControler iniciado
-2024-02-23T12:47:44.252-05:00  INFO 12828 --- [main] c.t.m.s.training.iTrainingServiceImpl    : Iniciando el iTrainingServiceimpl
-2024-02-23T12:47:44.262-05:00  INFO 12828 --- [main] c.task3.controller.trainingController    : iniciando trainingController 
-2024-02-23T12:47:44.276-05:00  INFO 12828 --- [main] c.t.m.s.trainingType.trainingTypeImplem  : trainingTypeImplem iniciado
-2024-02-23T12:47:44.942-05:00  INFO 12828 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
-2024-02-23T12:47:45.018-05:00  WARN 12828 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-02-23T12:47:45.706-05:00  INFO 12828 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:testdb'
-2024-02-23T12:47:45.809-05:00  INFO 12828 --- [main] com.task3.Service.traineeServiceTest     : Started traineeServiceTest in 6.573 seconds (process running for 9.734)
-2024-02-23T12:47:45.925-05:00  INFO 12828 --- [main] c.t.m.s.trainee.iTraineServiceImpl       : Trainer usuario unico generado
-2024-02-23T12:47:45.932-05:00  INFO 12828 --- [main] c.t.m.s.trainee.iTraineServiceImpl       : Trainer usuario unico generado
-2024-02-23T12:47:45.942-05:00  INFO 12828 --- [main] c.t.m.s.trainee.iTraineServiceImpl       : Trainee con el id: 1 encontrado con éxito.
-2024-02-23T12:47:45.948-05:00  INFO 12828 --- [main] c.t.m.s.trainee.iTraineServiceImpl       : Trainer usuario unico generado
-2024-02-23T12:47:45.948-05:00  INFO 12828 --- [main] c.t.m.s.trainee.iTraineServiceImpl       : Trainer contraseña generada
-2024-02-23T12:47:45.948-05:00  INFO 12828 --- [main] c.t.m.s.trainee.iTraineServiceImpl       : Trainee guardado con exito
-2024-02-23T12:47:45.954-05:00  INFO 12828 --- [main] c.t.m.s.trainee.iTraineServiceImpl       : Lista de Trainee Ejecutada
-2024-02-23T12:47:45.971-05:00 ERROR 12828 --- [main] c.t.m.s.trainee.iTraineServiceImpl       : Trainer con el usuario jesus no encontrado
-2024-02-23T12:47:45.978-05:00 ERROR 12828 --- [main] c.t.m.s.trainee.iTraineServiceImpl       : Trainer jesuseliminacion sin exito
-2024-02-23T12:47:45.984-05:00  INFO 12828 --- [main] c.t.m.s.trainee.iTraineServiceImpl       : Trainer contraseña generada
-2024-02-23T12:47:45.990-05:00 ERROR 12828 --- [main] c.t.m.s.trainee.iTraineServiceImpl       : No se encontró el trainee con el id: null
-2024-02-23T12:47:45.996-05:00  INFO 12828 --- [main] c.t.m.s.trainee.iTraineServiceImpl       : Trainer usuario unico generado
-2024-02-23T12:47:45.996-05:00  INFO 12828 --- [main] c.t.m.s.trainee.iTraineServiceImpl       : Trainer contraseña generada
-2024-02-23T12:47:45.997-05:00  INFO 12828 --- [main] c.t.m.s.trainee.iTraineServiceImpl       : Trainee guardado con exito
-2024-02-23T12:47:46.002-05:00 ERROR 12828 --- [main] c.t.m.s.trainee.iTraineServiceImpl       : Error en guardar
-2024-02-23T12:47:46.007-05:00  INFO 12828 --- [main] c.t.m.s.trainee.iTraineServiceImpl       : trainee con el id :1 eliminado con exito
-2024-02-23T12:47:46.008-05:00  INFO 12828 --- [main] c.t.m.s.trainee.iTraineServiceImpl       : Trainee con el id: 1 encontrado con éxito.
-2024-02-23T12:47:46.018-05:00  INFO 12828 --- [main] c.t.m.s.trainee.iTraineServiceImpl       : Trainer contraseña generada
-2024-02-23T12:47:46.026-05:00  INFO 12828 --- [main] c.t.m.s.trainee.iTraineServiceImpl       : Trainer jesuseliminado con exito
-2024-02-23T12:47:46.027-05:00  INFO 12828 --- [main] c.t.m.s.trainee.iTraineServiceImpl       : Trainer con el usuario jesus encontrado
-2024-02-23T12:47:46.031-05:00  INFO 12828 --- [main] c.t.m.s.trainee.iTraineServiceImpl       : Trainer usuario unico generado
-2024-02-23T12:47:46.031-05:00  INFO 12828 --- [main] c.t.m.s.trainee.iTraineServiceImpl       : Trainer contraseña generada
-2024-02-23T12:47:46.032-05:00  INFO 12828 --- [main] c.t.m.s.trainee.iTraineServiceImpl       : Trainee guardado con exito
-2024-02-23T12:47:46.032-05:00  INFO 12828 --- [main] c.t.m.s.trainee.iTraineServiceImpl       : Trainer usuario unico generado
-2024-02-23T12:47:46.032-05:00  INFO 12828 --- [main] c.t.m.s.trainee.iTraineServiceImpl       : Trainer actualizado
-2024-02-23T12:47:46.035-05:00  INFO 12828 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.task3.Service.trainerServiceTest]: trainerServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2024-02-23T12:47:46.097-05:00 ERROR 12828 --- [main] c.t.m.s.trainer.iTrainerServiceImpl      : Trainer con id: 1No encontrado
-2024-02-23T12:47:46.099-05:00  INFO 12828 --- [main] c.t.m.s.trainer.iTrainerServiceImpl      : trainer guardado con exito
-2024-02-23T12:47:46.102-05:00 ERROR 12828 --- [main] c.t.m.s.trainer.iTrainerServiceImpl      : Trainer con el username:null no se pudo cambiar el Status
-2024-02-23T12:47:46.104-05:00  INFO 12828 --- [main] c.t.m.s.trainer.iTrainerServiceImpl      : Trainer con username unico generado
-2024-02-23T12:47:46.107-05:00  INFO 12828 --- [main] c.t.m.s.trainer.iTrainerServiceImpl      : Lista de Trainer encontrada
-2024-02-23T12:47:46.110-05:00 ERROR 12828 --- [main] c.t.m.s.trainer.iTrainerServiceImpl      : Error en trainer save
-2024-02-23T12:47:46.113-05:00  INFO 12828 --- [main] c.t.m.s.trainer.iTrainerServiceImpl      : Trainer con username unico generado
-2024-02-23T12:47:46.116-05:00  INFO 12828 --- [main] c.t.m.s.trainer.iTrainerServiceImpl      : Trainer encontrado con id: 1 Encontrado 
-2024-02-23T12:47:46.118-05:00  INFO 12828 --- [main] c.t.m.s.trainer.iTrainerServiceImpl      : trainer guardado con exito
-2024-02-23T12:47:46.119-05:00 ERROR 12828 --- [main] c.t.m.s.trainer.iTrainerServiceImpl      : error en Trainer update
-2024-02-23T12:47:46.122-05:00 ERROR 12828 --- [main] c.t.m.s.trainer.iTrainerServiceImpl      : Trainer no encontrado con el username:jesus
-2024-02-23T12:47:46.124-05:00  INFO 12828 --- [main] c.t.m.s.trainer.iTrainerServiceImpl      : Trainer con el username:existingUsername Status cambiado
-2024-02-23T12:47:46.127-05:00  INFO 12828 --- [main] c.t.m.s.trainer.iTrainerServiceImpl      : Contraseña Generada de Trainer
-2024-02-23T12:47:46.129-05:00  INFO 12828 --- [main] c.t.m.s.trainer.iTrainerServiceImpl      : trainer guardado con exito
-2024-02-23T12:47:46.130-05:00  INFO 12828 --- [main] c.t.m.s.trainer.iTrainerServiceImpl      : Trainer con username unico generado
-2024-02-23T12:47:46.130-05:00  INFO 12828 --- [main] c.t.m.s.trainer.iTrainerServiceImpl      : Trainer actualizado
-2024-02-23T12:47:46.133-05:00  INFO 12828 --- [main] c.t.m.s.trainer.iTrainerServiceImpl      : Contraseña Generada de Trainer
-2024-02-23T12:47:46.135-05:00 ERROR 12828 --- [main] c.t.m.s.trainer.iTrainerServiceImpl      : Lista de Trainer no encontrada
-2024-02-23T12:47:46.137-05:00  INFO 12828 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.task3.Service.TrainingtypeServiTest]: TrainingtypeServiTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2024-02-23T12:47:46.180-05:00  INFO 12828 --- [main] c.t.m.s.trainingType.trainingTypeImplem  : lista de Training_type encontrada
-2024-02-23T12:47:46.182-05:00 ERROR 12828 --- [main] c.t.m.s.trainingType.trainingTypeImplem  : no se encontro ninguna lista de Training_type
-2024-02-23T12:47:46.193-05:00  INFO 12828 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.task3.Task3ApplicationTests]: Task3ApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2024-02-23T12:47:46.198-05:00  INFO 12828 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.task3.Task3Application for test class com.task3.Task3ApplicationTests
-2024-02-23T12:47:46.611-05:00  INFO 12828 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-02-23T12:47:46.614-05:00  INFO 12828 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-02-23T12:47:46.616-05:00  INFO 12828 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-02-23T12:48:52.209-05:00  INFO 20300 --- [restartedMain] com.task3.Task3Application               : Starting Task3Application using Java 19.0.2 with PID 20300 (C:\Users\USER\git\task3\task_3\target\classes started by USER in C:\Users\USER\git\task3\task_3)
-2024-02-23T12:48:52.211-05:00  INFO 20300 --- [restartedMain] com.task3.Task3Application               : The following 1 profile is active: "dev"
-2024-02-23T12:48:52.241-05:00  INFO 20300 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-02-23T12:48:52.241-05:00  INFO 20300 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-02-23T12:48:52.905-05:00  INFO 20300 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-02-23T12:48:52.950-05:00  INFO 20300 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 39 ms. Found 5 JPA repository interfaces.
-2024-02-23T12:48:53.440-05:00  INFO 20300 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8090 (http)
-2024-02-23T12:48:53.447-05:00  INFO 20300 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-02-23T12:48:53.448-05:00  INFO 20300 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
-2024-02-23T12:48:53.484-05:00  INFO 20300 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-02-23T12:48:53.484-05:00  INFO 20300 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1243 ms
-2024-02-23T12:48:53.596-05:00  INFO 20300 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-02-23T12:48:53.727-05:00  INFO 20300 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
-2024-02-23T12:48:53.728-05:00  INFO 20300 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-02-23T12:48:53.735-05:00  INFO 20300 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:testdb'
-2024-02-23T12:48:53.872-05:00  INFO 20300 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-02-23T12:48:53.907-05:00  INFO 20300 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
-2024-02-23T12:48:53.930-05:00  INFO 20300 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-02-23T12:48:54.077-05:00  INFO 20300 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-02-23T12:48:54.109-05:00  WARN 20300 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-02-23T12:48:54.561-05:00  INFO 20300 --- [restartedMain] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: com.task3.models.entity.User (class must be instantiated by Interceptor)
-2024-02-23T12:48:54.718-05:00  INFO 20300 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-02-23T12:48:54.771-05:00  INFO 20300 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-02-23T12:48:54.781-05:00  INFO 20300 --- [restartedMain] com.task3.Task3Application               : main ha sido inicializado
-2024-02-23T12:48:54.977-05:00  INFO 20300 --- [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2024-02-23T12:48:55.200-05:00  INFO 20300 --- [restartedMain] c.t.m.s.trainer.iTrainerServiceImpl      : Iniciando el iTrainerServiceImpl
-2024-02-23T12:48:55.217-05:00  INFO 20300 --- [restartedMain] com.task3.controller.itranerController   : iniciando itrainerController
-2024-02-23T12:48:55.246-05:00  INFO 20300 --- [restartedMain] c.t.m.s.trainee.iTraineServiceImpl       : iTraineServiceImpl ha sido inicializado
-2024-02-23T12:48:55.253-05:00  INFO 20300 --- [restartedMain] com.task3.controller.traineeController   : traineeControler iniciado
-2024-02-23T12:48:55.272-05:00  INFO 20300 --- [restartedMain] c.t.m.s.training.iTrainingServiceImpl    : Iniciando el iTrainingServiceimpl
-2024-02-23T12:48:55.277-05:00  INFO 20300 --- [restartedMain] c.task3.controller.trainingController    : iniciando trainingController 
-2024-02-23T12:48:55.286-05:00  INFO 20300 --- [restartedMain] c.t.m.s.trainingType.trainingTypeImplem  : trainingTypeImplem iniciado
-2024-02-23T12:48:55.564-05:00  INFO 20300 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/actuator'
-2024-02-23T12:48:55.613-05:00  WARN 20300 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-02-23T12:48:56.172-05:00  INFO 20300 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2024-02-23T12:48:56.223-05:00  INFO 20300 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8090 (http) with context path ''
-2024-02-23T12:48:56.235-05:00  INFO 20300 --- [restartedMain] com.task3.Task3Application               : Started Task3Application in 4.31 seconds (process running for 4.745)
-2024-02-23T12:48:57.216-05:00  INFO 20300 --- [RMI TCP Connection(3)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-02-23T12:48:57.216-05:00  INFO 20300 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-02-23T12:48:57.217-05:00  INFO 20300 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2024-02-23T12:49:02.217-05:00  INFO 20300 --- [http-nio-8090-exec-5] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 410 ms
-2024-02-23T12:50:25.804-05:00  INFO 20300 --- [RMI TCP Connection(6)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2024-02-23T12:50:25.817-05:00  INFO 20300 --- [RMI TCP Connection(6)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-02-23T12:50:25.820-05:00  WARN 20300 --- [RMI TCP Connection(6)-127.0.0.1] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de datos ya esta cerrada (para des-habilitar el cerrado automatico durante el shutdown de la VM, agregue ";DB_CLOSE_ON_EXIT=FALSE" a la URL de conexión)
-Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
-2024-02-23T12:50:25.820-05:00  INFO 20300 --- [RMI TCP Connection(6)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-02-23T12:50:25.822-05:00  INFO 20300 --- [RMI TCP Connection(6)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-02-27T12:03:22.948-05:00  INFO 17280 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-02-27T12:03:22.949-05:00  INFO 17280 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-02-27T20:54:43.092-05:00  INFO 26488 --- [restartedMain] com.task3.Task3Application               : Starting Task3Application using Java 19.0.2 with PID 26488 (C:\Users\USER\git\task3\task_3\target\classes started by USER in C:\Users\USER\git\task3\task_3)
+2024-02-27T20:54:43.093-05:00  INFO 26488 --- [restartedMain] com.task3.Task3Application               : The following 1 profile is active: "dev"
+2024-02-27T20:54:43.126-05:00  INFO 26488 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-02-27T20:54:43.126-05:00  INFO 26488 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-02-27T20:54:44.006-05:00  INFO 26488 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-27T20:54:44.061-05:00  INFO 26488 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 49 ms. Found 5 JPA repository interfaces.
+2024-02-27T20:54:44.679-05:00  INFO 26488 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8090 (http)
+2024-02-27T20:54:44.688-05:00  INFO 26488 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-02-27T20:54:44.688-05:00  INFO 26488 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2024-02-27T20:54:44.733-05:00  INFO 26488 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-02-27T20:54:44.734-05:00  INFO 26488 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1608 ms
+2024-02-27T20:54:44.857-05:00  INFO 26488 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-02-27T20:54:45.026-05:00  INFO 26488 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2024-02-27T20:54:45.028-05:00  INFO 26488 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-02-27T20:54:45.035-05:00  INFO 26488 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:testdb'
+2024-02-27T20:54:45.191-05:00  INFO 26488 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-27T20:54:45.245-05:00  INFO 26488 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
+2024-02-27T20:54:45.276-05:00  INFO 26488 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-02-27T20:54:45.476-05:00  INFO 26488 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-27T20:54:45.522-05:00  WARN 26488 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-02-27T20:54:46.020-05:00  INFO 26488 --- [restartedMain] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: com.task3.Entity.User (class must be instantiated by Interceptor)
+2024-02-27T20:54:46.231-05:00  INFO 26488 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-27T20:54:46.293-05:00  INFO 26488 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-27T20:54:46.303-05:00  INFO 26488 --- [restartedMain] com.task3.Task3Application               : main ha sido inicializado
+2024-02-27T20:54:46.526-05:00  INFO 26488 --- [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-02-27T20:54:46.785-05:00  INFO 26488 --- [restartedMain] c.t.service.trainer.iTrainerServiceImpl  : Iniciando el iTrainerServiceImpl
+2024-02-27T20:54:46.803-05:00  INFO 26488 --- [restartedMain] com.task3.Controller.itranerController   : iniciando itrainerController
+2024-02-27T20:54:46.826-05:00  INFO 26488 --- [restartedMain] c.t.service.trainee.iTraineServiceImpl   : iTraineServiceImpl ha sido inicializado
+2024-02-27T20:54:46.834-05:00  INFO 26488 --- [restartedMain] com.task3.Controller.traineeController   : traineeControler iniciado
+2024-02-27T20:54:46.861-05:00  INFO 26488 --- [restartedMain] c.t.s.training.iTrainingServiceImpl      : Iniciando el iTrainingServiceimpl
+2024-02-27T20:54:46.867-05:00  INFO 26488 --- [restartedMain] c.task3.Controller.trainingController    : iniciando trainingController 
+2024-02-27T20:54:46.878-05:00  INFO 26488 --- [restartedMain] c.t.s.trainingType.trainingTypeImplem    : trainingTypeImplem iniciado
+2024-02-27T20:54:47.192-05:00  INFO 26488 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/actuator'
+2024-02-27T20:54:47.246-05:00  WARN 26488 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-27T20:54:47.886-05:00  INFO 26488 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-02-27T20:54:47.945-05:00  INFO 26488 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8090 (http) with context path ''
+2024-02-27T20:54:47.956-05:00  INFO 26488 --- [restartedMain] com.task3.Task3Application               : Started Task3Application in 5.223 seconds (process running for 5.835)
+2024-02-27T20:54:48.243-05:00  INFO 26488 --- [RMI TCP Connection(3)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-02-27T20:54:48.244-05:00  INFO 26488 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-02-27T20:54:48.245-05:00  INFO 26488 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms

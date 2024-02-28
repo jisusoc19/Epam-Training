@@ -1,22 +1,14 @@
-package com.task3.controller;
+package com.task3.Controller;
 
 
-
-
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-import com.task3.models.entity.Trainee;
-import com.task3.models.service.trainee.iTraineeService;
 
-import RestHandlerException.ResouceNotFoundException;
+import com.task3.Entity.Trainee;
+import com.task3.service.trainee.iTraineeService;
 
-import java.util.List;
-
-import org.slf4j.Logger;
 import jakarta.annotation.PostConstruct;
 import lombok.extern.slf4j.Slf4j;
 

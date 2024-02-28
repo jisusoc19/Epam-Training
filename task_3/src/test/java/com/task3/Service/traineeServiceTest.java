@@ -12,14 +12,13 @@ import org.mockito.Mock;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-import com.task3.models.Repository.iTraineedao;
-import com.task3.models.entity.Trainee;
-import com.task3.models.entity.Trainer;
-import com.task3.models.entity.Training;
-import com.task3.models.service.trainee.iTraineServiceImpl;
-import com.task3.models.service.trainee.iTraineeService;
+import com.task3.Entity.Trainee;
+import com.task3.Exception.RestHandlerException.ResouceNotFoundException;
+import com.task3.Repository.iTraineedao;
+import com.task3.service.trainee.iTraineServiceImpl;
+import com.task3.service.trainee.iTraineeService;
 
-import RestHandlerException.ResouceNotFoundException;
+
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;

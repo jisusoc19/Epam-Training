@@ -26,7 +26,11 @@ spring:
     console:
       enabled: true
       path: /h2
-      
+jwtKeys:
+   privateKeyPath: jwtKeys/private.key.pem
+   publicKeyPath: jwtKeys/public.key.pem
+
+    
 management:
   endpoints:
     web:
@@ -39,7 +43,6 @@ management:
 info:
   env:
     enabled: true  
-      
 logging:
   file:
     name: logback.xml
@@ -52,6 +55,10 @@ springdoc:
     enabled: true
     path: /doc/swagger-ui.html
   show-actuator: true
+
+
+
+
 ---
 #Local configuracion
 

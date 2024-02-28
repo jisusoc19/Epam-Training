@@ -12,13 +12,14 @@ import org.mockito.Mock;
 import org.springframework.dao.DataAccessResourceFailureException;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-import com.task3.models.Repository.iTrainerdao;
-import com.task3.models.entity.Trainee;
-import com.task3.models.entity.Trainer;
-import com.task3.models.entity.Training;
-import com.task3.models.service.trainer.iTrainerServiceImpl;
+import com.task3.Entity.Trainee;
+import com.task3.Entity.Trainer;
+import com.task3.Entity.Training;
+import com.task3.Exception.RestHandlerException.ResouceNotFoundException;
+import com.task3.Repository.iTrainerdao;
+import com.task3.service.trainer.iTrainerServiceImpl;
 
-import RestHandlerException.ResouceNotFoundException;
+
 import jakarta.validation.constraints.AssertTrue;
 
 import static org.assertj.core.api.Assertions.assertThat;

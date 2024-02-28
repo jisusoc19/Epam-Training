@@ -1,4 +1,5 @@
-package com.task3.controller;
+package com.task3.Controller;
+
 
 import java.util.Optional;
 
@@ -18,8 +19,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.task3.models.entity.Trainer;
-import com.task3.models.service.trainer.iTrainerService;
+import com.task3.Entity.Trainer;
+import com.task3.service.trainer.iTrainerService;
 
 import jakarta.annotation.PostConstruct;
 import lombok.extern.slf4j.Slf4j;

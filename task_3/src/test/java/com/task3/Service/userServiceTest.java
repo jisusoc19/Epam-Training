@@ -12,10 +12,10 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-import com.task3.models.Repository.iUserRepository;
-import com.task3.models.entity.Trainer;
-import com.task3.models.entity.User;
-import com.task3.models.service.user.iUserServiceImpl;
+import com.task3.Entity.Trainer;
+import com.task3.Entity.User;
+import com.task3.Repository.iUserRepository;
+import com.task3.service.user.iUserServiceImpl;
 
 @ExtendWith(SpringExtension.class)
 public class userServiceTest {

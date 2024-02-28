@@ -6,11 +6,9 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-import com.task3.models.Repository.iTrainingdao;
-
-import com.task3.models.entity.Training;
-
-import com.task3.models.service.training.iTrainingServiceImpl;
+import com.task3.Entity.Training;
+import com.task3.Repository.iTrainingdao;
+import com.task3.service.training.iTrainingServiceImpl;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.BDDMockito.given;
