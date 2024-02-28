@@ -18,6 +18,7 @@ public class trainingtypeController {
 	@Autowired
 	private training_typeService trainingtypeservice;
 	
+	
 	@GetMapping("/list")
 	public void findAll(){
 		log.info("iniciando el controlador trainingtypecontroller");
