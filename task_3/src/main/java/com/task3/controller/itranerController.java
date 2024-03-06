@@ -1,6 +1,7 @@
 package com.task3.Controller;
 
 
+import java.util.List;
 import java.util.Optional;
 
 import org.slf4j.Logger;
@@ -19,6 +20,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.task3.Entity.Trainee;
 import com.task3.Entity.Trainer;
 import com.task3.service.trainer.iTrainerService;
 
@@ -39,19 +41,21 @@ public class itranerController {
 		log.info("iniciando itrainerControler findById");
 		return itrainerservice.findById(id);
 		
-		
 	}
-	@GetMapping("/trainer/username/{username}")
+	
+	@GetMapping("/trainer/user/{username}")
 	public Trainer findbyusername(@PathVariable String username){
 		log.info("iniciando itrainerControler findByUsername");
 		return itrainerservice.findbyusername(username);
 		
 		
 	}
+	
 	@GetMapping("/trainer")
-	public void findAll(){
+	public List<Trainer> findAll(){
 		log.info("iniciando itrainerControler Find all");
-		itrainerservice.findAll();
+		
+		return itrainerservice.findAll();
 		
 		
 	}
@@ -69,14 +73,7 @@ public class itranerController {
 	public void init() {
 		log.info("iniciando itrainerController");
 	}
-	@GetMapping("/Loggin")
-	@ResponseStatus(HttpStatus.OK)
-	public void loggin(@PathVariable String Username, String password){
-		log.info("iniciando itrainerControler Find all");
-		itrainerservice.loggin(Username, password);
-		
-		
-	}
+
 	
 	@PatchMapping("/trainer/active")
 	public Trainer active(@PathVariable String username, Boolean status){

@@ -28,6 +28,7 @@ import lombok.extern.slf4j.Slf4j;
 @Data
 @Table(name = "usergym")
 @Slf4j
+@NoArgsConstructor
 public class User implements Serializable {
 
 

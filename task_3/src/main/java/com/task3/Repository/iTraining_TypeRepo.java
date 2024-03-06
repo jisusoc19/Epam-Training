@@ -12,6 +12,6 @@ import com.task3.Entity.Training_Type;
 
 import jakarta.annotation.PostConstruct;
 @Repository
-public interface iTrainer_TypeRepo extends CrudRepository<Training_Type,Long> {
+public interface iTraining_TypeRepo extends CrudRepository<Training_Type,Long> {
 
 }

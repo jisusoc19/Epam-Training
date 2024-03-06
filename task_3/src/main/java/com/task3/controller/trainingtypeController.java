@@ -2,11 +2,14 @@ package com.task3.Controller;
 
 
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.task3.Entity.Training_Type;
 import com.task3.service.trainingType.training_typeService;
 
 import lombok.extern.slf4j.Slf4j;
@@ -20,8 +23,8 @@ public class trainingtypeController {
 	
 	
 	@GetMapping("/list")
-	public void findAll(){
+	public List<Training_Type> findAll(){
 		log.info("iniciando el controlador trainingtypecontroller");
-		trainingtypeservice.findALL();
+		return trainingtypeservice.findALL();
 	}
 }

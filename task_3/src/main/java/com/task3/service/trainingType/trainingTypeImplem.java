@@ -9,7 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.task3.Entity.Trainee;
 import com.task3.Entity.Training_Type;
 import com.task3.Exception.RestHandlerException.ResouceNotFoundException;
-import com.task3.Repository.iTrainer_TypeRepo;
+import com.task3.Repository.iTraining_TypeRepo;
 
 import jakarta.annotation.PostConstruct;
 import lombok.extern.log4j.Log4j;
@@ -20,7 +20,7 @@ import lombok.extern.slf4j.Slf4j;
 public class trainingTypeImplem implements training_typeService {
 
 	@Autowired
-	private iTrainer_TypeRepo trainer_typerepo;
+	private iTraining_TypeRepo trainer_typerepo;
 	
 	@Transactional
 	@Override

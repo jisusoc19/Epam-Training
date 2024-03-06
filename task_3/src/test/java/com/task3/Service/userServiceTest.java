@@ -52,7 +52,7 @@ public class userServiceTest {
     @Test
     public void generatePasswordLength() {
        
-        String password = userservice.generatePasword("anyPassword");
+        String password = userservice.generatePasword();
 
         
         assertEquals(10, password.length(), "La contraseña generada debe tener 10 caracteres de longitud.");
@@ -61,7 +61,7 @@ public class userServiceTest {
     @Test
     public void generatePasswordCaracter() {
         
-        String password = userservice.generatePasword("anyPassword");
+        String password = userservice.generatePasword();
         String allowedChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
         

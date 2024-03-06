@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import com.task3.Entity.Training_Type;
-import com.task3.Repository.iTrainer_TypeRepo;
+import com.task3.Repository.iTraining_TypeRepo;
 
 @Service
 public interface training_typeService{

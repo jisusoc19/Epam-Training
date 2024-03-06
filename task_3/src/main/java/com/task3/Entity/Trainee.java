@@ -45,10 +45,10 @@ public class Trainee implements Serializable {
 	private Long id;
 
 	@Temporal(TemporalType.DATE)
-	@Column(name = "dateBirth", nullable = false)
+	@Column(name = "dateBirth", nullable = true)
 	private Date dateBirth;
 
-	@Column(name="addres", length = 20 , nullable = false)
+	@Column(name="addres", length = 30 , nullable = false)
 	private String addres;
 	
 	@OneToOne(fetch = FetchType.LAZY)

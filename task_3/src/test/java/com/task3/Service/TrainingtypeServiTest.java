@@ -9,7 +9,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 import com.task3.Entity.Trainee;
 import com.task3.Entity.Training_Type;
 import com.task3.Exception.RestHandlerException.ResouceNotFoundException;
-import com.task3.Repository.iTrainer_TypeRepo;
+import com.task3.Repository.iTraining_TypeRepo;
 import com.task3.service.trainingType.trainingTypeImplem;
 
 
@@ -26,7 +26,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class TrainingtypeServiTest {
 	
 	@Mock
-	private iTrainer_TypeRepo trainingtyperepo;
+	private iTraining_TypeRepo trainingtyperepo;
 	
 	@InjectMocks
 	private trainingTypeImplem trainingtypeser;

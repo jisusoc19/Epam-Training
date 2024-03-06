@@ -31,7 +31,7 @@ public class iUserServiceImpl implements iUserService {
 		return username;
 	}
 	@Override
-	public String generatePasword(String password) {
+	public String generatePasword() {
 	    int length = 10;
         String letras = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 

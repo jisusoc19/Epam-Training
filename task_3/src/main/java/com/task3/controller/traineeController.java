@@ -1,6 +1,8 @@
 package com.task3.Controller;
 
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -23,9 +25,9 @@ public class traineeController {
 	
 
 	@GetMapping("/trainee")
-	public void index(){
+	public List<Trainee> index(){
 		log.info("traineeControler GetList iniciado");
-		traineeservice.findAll();
+		return traineeservice.findAll();
 		
 	}
 
@@ -62,13 +64,7 @@ public class traineeController {
 		return traineeservice.update(trainee, id);
 		
 	}
-	@GetMapping("/Loggin")
-	@ResponseStatus(HttpStatus.OK)
-	public void loggin(@PathVariable String Username, String password){
-		log.info("iniciando itraineeControler loggin");
-		traineeservice.loggin(Username, password);
-		
-	}
+
 	@PatchMapping("/trainee/{username}/{status}")
 	public Trainee updateTraineestatus(@PathVariable String username, Boolean status) {
 		log.info("iniciando traineeControler updateTraineestatus ");

@@ -8,5 +8,5 @@ import com.task3.Entity.User;
 public interface iUserService {
 	public User findbyusername(String username);
 	String generateUniqueUsername(String firstName, String lastName);
-	String generatePasword(String password);
+	String generatePasword();
 }

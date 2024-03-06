@@ -41,7 +41,7 @@ public class iTraineServiceImpl implements iTraineeService {
 			throw new ResouceNotFoundException("clientes");
 		}
 		log.info("Lista de Trainee Ejecutada");
-		return (List<Trainee>) trainerdaoJpa.findAll();
+		return lista;
 	}
 
 	@Transactional(readOnly = true)
